@@ -1,7 +1,7 @@
-lib/CMakeFiles/emu.dir/cpu.c.o: \
- /home/shahzaibsidd/projects/gbEmulator/lib/cpu.c \
+lib/CMakeFiles/emu.dir/instructions.c.o: \
+ /home/shahzaibsidd/projects/gbEmulator/lib/instructions.c \
  /usr/include/stdc-predef.h \
- /home/shahzaibsidd/projects/gbEmulator/include/cpu.h \
+ /home/shahzaibsidd/projects/gbEmulator/include/instructions.h \
  /home/shahzaibsidd/projects/gbEmulator/include/common.h \
  /usr/lib/gcc/x86_64-linux-gnu/13/include/stdint.h /usr/include/stdint.h \
  /usr/include/x86_64-linux-gnu/bits/libc-header-start.h \
@@ -56,6 +56,4 @@ lib/CMakeFiles/emu.dir/cpu.c.o: \
  /usr/include/x86_64-linux-gnu/bits/struct_mutex.h \
  /usr/include/x86_64-linux-gnu/bits/struct_rwlock.h /usr/include/alloca.h \
  /usr/include/x86_64-linux-gnu/bits/stdlib-float.h \
- /home/shahzaibsidd/projects/gbEmulator/include/instructions.h \
- /home/shahzaibsidd/projects/gbEmulator/include/bus.h \
- /home/shahzaibsidd/projects/gbEmulator/include/emu.h
+ /home/shahzaibsidd/projects/gbEmulator/include/cpu.h

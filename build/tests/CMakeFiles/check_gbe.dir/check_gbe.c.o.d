@@ -68,4 +68,5 @@ tests/CMakeFiles/check_gbe.dir/check_gbe.c.o: \
  /home/shahzaibsidd/projects/gbEmulator/include/emu.h \
  /home/shahzaibsidd/projects/gbEmulator/include/common.h \
  /usr/lib/gcc/x86_64-linux-gnu/13/include/stdbool.h \
- /home/shahzaibsidd/projects/gbEmulator/include/cpu.h
+ /home/shahzaibsidd/projects/gbEmulator/include/cpu.h \
+ /home/shahzaibsidd/projects/gbEmulator/include/instructions.h

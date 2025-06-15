@@ -5,6 +5,7 @@ tests/CMakeFiles/check_gbe.dir/check_gbe.c.o: /home/shahzaibsidd/projects/gbEmul
   /home/shahzaibsidd/projects/gbEmulator/include/common.h \
   /home/shahzaibsidd/projects/gbEmulator/include/cpu.h \
   /home/shahzaibsidd/projects/gbEmulator/include/emu.h \
+  /home/shahzaibsidd/projects/gbEmulator/include/instructions.h \
   /usr/include/alloca.h \
   /usr/include/check.h \
   /usr/include/check_stdint.h \
@@ -112,15 +113,17 @@ tests/CMakeFiles/check_gbe.dir/check_gbe.c.o: /home/shahzaibsidd/projects/gbEmul
 
 /usr/include/x86_64-linux-gnu/bits/types/struct_timeval.h:
 
+/usr/include/x86_64-linux-gnu/bits/types/struct_FILE.h:
+
 /usr/include/x86_64-linux-gnu/bits/uintn-identity.h:
 
 /usr/include/x86_64-linux-gnu/bits/fp-logb.h:
 
-/usr/include/check.h:
-
 /usr/include/x86_64-linux-gnu/bits/fp-fast.h:
 
 /usr/include/stdint.h:
+
+/usr/include/check.h:
 
 /usr/include/x86_64-linux-gnu/bits/timesize.h:
 
@@ -135,8 +138,6 @@ tests/CMakeFiles/check_gbe.dir/check_gbe.c.o: /home/shahzaibsidd/projects/gbEmul
 /usr/include/endian.h:
 
 /usr/include/math.h:
-
-/usr/include/x86_64-linux-gnu/bits/types/struct_FILE.h:
 
 /usr/include/x86_64-linux-gnu/bits/endian.h:
 
@@ -194,6 +195,8 @@ tests/CMakeFiles/check_gbe.dir/check_gbe.c.o: /home/shahzaibsidd/projects/gbEmul
 
 /usr/include/features-time64.h:
 
+/home/shahzaibsidd/projects/gbEmulator/include/instructions.h:
+
 /usr/include/x86_64-linux-gnu/bits/types/cookie_io_functions_t.h:
 
 /usr/include/x86_64-linux-gnu/bits/math-vector.h:
@@ -230,9 +233,9 @@ tests/CMakeFiles/check_gbe.dir/check_gbe.c.o: /home/shahzaibsidd/projects/gbEmul
 
 /usr/include/x86_64-linux-gnu/bits/types/__locale_t.h:
 
-/usr/include/x86_64-linux-gnu/bits/long-double.h:
-
 /usr/include/x86_64-linux-gnu/bits/byteswap.h:
+
+/usr/include/x86_64-linux-gnu/bits/long-double.h:
 
 /usr/include/x86_64-linux-gnu/bits/types/__sigset_t.h:
 

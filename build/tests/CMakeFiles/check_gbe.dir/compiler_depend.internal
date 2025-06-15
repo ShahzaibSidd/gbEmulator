@@ -6,6 +6,7 @@ tests/CMakeFiles/check_gbe.dir/check_gbe.c.o
  /home/shahzaibsidd/projects/gbEmulator/include/common.h
  /home/shahzaibsidd/projects/gbEmulator/include/cpu.h
  /home/shahzaibsidd/projects/gbEmulator/include/emu.h
+ /home/shahzaibsidd/projects/gbEmulator/include/instructions.h
  /usr/include/alloca.h
  /usr/include/check.h
  /usr/include/check_stdint.h

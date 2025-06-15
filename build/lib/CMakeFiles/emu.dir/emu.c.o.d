@@ -58,6 +58,7 @@ lib/CMakeFiles/emu.dir/emu.c.o: \
  /usr/include/x86_64-linux-gnu/bits/stdlib-float.h \
  /home/shahzaibsidd/projects/gbEmulator/include/cart.h \
  /home/shahzaibsidd/projects/gbEmulator/include/cpu.h \
+ /home/shahzaibsidd/projects/gbEmulator/include/instructions.h \
  /usr/include/SDL2/SDL.h /usr/include/SDL2/SDL_main.h \
  /usr/include/SDL2/SDL_stdinc.h /usr/include/SDL2/SDL_config.h \
  /usr/include/x86_64-linux-gnu/SDL2/_real_SDL_config.h \
