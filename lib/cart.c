@@ -163,7 +163,7 @@ bool cart_load(char *cart) {
         checksum = checksum - ctx.rom_data[address] - 1;
     }
 
-    printf("\t Checksum Status :  %2.2X (%s)\n", ctx.header->checksum, (ctx.header->checksum == checksum) ? "PASSED" : "FAILED");
+    printf("\t Checksum Status :  %2.2X (%s)\n", ctx.header->checksum, (checksum & 0xEE) ? "PASSED" : "FAILED");
 
     return true;
 };

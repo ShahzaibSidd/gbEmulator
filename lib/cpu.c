@@ -6,16 +6,12 @@ cpu_context ctx = {0};
 
 void cpu_init() {
     ctx.regs.pc = (u16)0x100;
+    ctx.regs.a = 0x01;
 }
 
 static void fetch_instruction() {
     ctx.cur_opcode = bus_read(ctx.regs.pc++);
     ctx.cur_inst = instruction_by_opcode(ctx.cur_opcode);
-
-    if (ctx.cur_inst == NULL) {
-        printf("Uknown Intruction... %02X\n", ctx.cur_opcode);
-        exit(-7);
-    }
 };
 
 static void fetch_data() {
@@ -56,7 +52,13 @@ static void fetch_data() {
 };
 
 static void execute() {
-    printf("Executing not implemented yet.\n");
+    IN_PROC proc = inst_get_processor(ctx.cur_inst->type);
+
+    if (!proc) {
+        NOT_IMPL
+    }
+
+    proc(&ctx);
 };
 
 bool cpu_step() {
@@ -65,14 +67,19 @@ bool cpu_step() {
         u16 pc = ctx.regs.pc;
         fetch_instruction();
         fetch_data();
+
+        printf("%04X: %-7s (%02X %02X %02X) A:%02X B:%02X C:%02X\n",
+            pc, inst_name(ctx.cur_inst->type), ctx.cur_opcode,
+            bus_read(pc + 1), bus_read(pc + 2), ctx.regs.a, ctx.regs.b, ctx.regs.c);
         
-        printf("Executing Instr %02X    PC: %04X\n", ctx.cur_opcode, pc);
+        if (ctx.cur_inst == NULL) {
+            printf("Uknown Intruction... %02X\n", ctx.cur_opcode);
+            exit(-7);
+        }
         
         execute();
     }
-    if (ctx.regs.pc >0x105) {
-        return false;
-    }
+
     return true;
 };
 
