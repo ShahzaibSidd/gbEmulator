@@ -26,6 +26,8 @@ u16 cpu_read_reg(reg_type rt) {
         case RT_PC: return ctx.regs.pc;
         case RT_SP: return ctx.regs.sp;
         default: return 0;
+
+        
         
     }
 };
