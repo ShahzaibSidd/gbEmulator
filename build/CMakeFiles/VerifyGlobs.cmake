@@ -25,6 +25,7 @@ set(OLD_GLOB
   "/home/shahzaibsidd/projects/gbEmulator/lib/bus.c"
   "/home/shahzaibsidd/projects/gbEmulator/lib/cart.c"
   "/home/shahzaibsidd/projects/gbEmulator/lib/cpu.c"
+  "/home/shahzaibsidd/projects/gbEmulator/lib/cpu_fetch.c"
   "/home/shahzaibsidd/projects/gbEmulator/lib/cpu_proc.c"
   "/home/shahzaibsidd/projects/gbEmulator/lib/cpu_util.c"
   "/home/shahzaibsidd/projects/gbEmulator/lib/emu.c"

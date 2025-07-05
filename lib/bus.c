@@ -1,4 +1,6 @@
 #include <bus.h>
+#include <cart.h>
+
 
 // 0x0000 - 0x3FFF : ROM Bank 0
 // 0x4000 - 0x7FFF : ROM Bank 1 - Switchable
@@ -21,9 +23,25 @@ u8 bus_read(u16 address) {
     NOT_IMPL
 };
 
+u16 bus_read16(u16 address) {
+    u16 high = bus_read(address);
+    u16 low = bus_read(address+1);
+
+    return (low | (high << 8));
+}
+
 void bus_write(u16 address, u8 value) {
     if (address < 0x8000) {
         cart_write(address, value);
     }
     NOT_IMPL
 }; 
+
+void bus_write16(u16 address, u16 value) {
+    u8 high = (value >> 8) & 0xFF;
+    u8 low = value & 0xFF;
+    bus_write(address+1, high);
+    bus_write(address, low);
+
+    return;
+}

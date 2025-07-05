@@ -34,6 +34,7 @@ typedef struct {
 } cpu_context;
 
 u16 cpu_read_reg(reg_type rt);
+u16 cpu_set_reg(reg_type rt, u16 val);
 
 void cpu_init();
 bool cpu_step();
