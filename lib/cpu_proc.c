@@ -1,5 +1,6 @@
 #include <cpu.h>
 #include <emu.h>
+#include <bus.h>
 
 //where the emulator processes cpu intructions
 
