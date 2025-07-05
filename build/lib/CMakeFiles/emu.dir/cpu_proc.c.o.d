@@ -57,4 +57,5 @@ lib/CMakeFiles/emu.dir/cpu_proc.c.o: \
  /usr/include/x86_64-linux-gnu/bits/struct_rwlock.h /usr/include/alloca.h \
  /usr/include/x86_64-linux-gnu/bits/stdlib-float.h \
  /home/shahzaibsidd/projects/gbEmulator/include/instructions.h \
- /home/shahzaibsidd/projects/gbEmulator/include/emu.h
+ /home/shahzaibsidd/projects/gbEmulator/include/emu.h \
+ /home/shahzaibsidd/projects/gbEmulator/include/bus.h

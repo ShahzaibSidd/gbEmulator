@@ -195,10 +195,24 @@ lib/CMakeFiles/emu.dir/ppu.c.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling C source to assembly CMakeFiles/emu.dir/ppu.c.s"
 	cd /home/shahzaibsidd/projects/gbEmulator/build/lib && /usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /home/shahzaibsidd/projects/gbEmulator/lib/ppu.c -o CMakeFiles/emu.dir/ppu.c.s
 
+lib/CMakeFiles/emu.dir/ram.c.o: lib/CMakeFiles/emu.dir/flags.make
+lib/CMakeFiles/emu.dir/ram.c.o: /home/shahzaibsidd/projects/gbEmulator/lib/ram.c
+lib/CMakeFiles/emu.dir/ram.c.o: lib/CMakeFiles/emu.dir/compiler_depend.ts
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/shahzaibsidd/projects/gbEmulator/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_10) "Building C object lib/CMakeFiles/emu.dir/ram.c.o"
+	cd /home/shahzaibsidd/projects/gbEmulator/build/lib && /usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT lib/CMakeFiles/emu.dir/ram.c.o -MF CMakeFiles/emu.dir/ram.c.o.d -o CMakeFiles/emu.dir/ram.c.o -c /home/shahzaibsidd/projects/gbEmulator/lib/ram.c
+
+lib/CMakeFiles/emu.dir/ram.c.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing C source to CMakeFiles/emu.dir/ram.c.i"
+	cd /home/shahzaibsidd/projects/gbEmulator/build/lib && /usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /home/shahzaibsidd/projects/gbEmulator/lib/ram.c > CMakeFiles/emu.dir/ram.c.i
+
+lib/CMakeFiles/emu.dir/ram.c.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling C source to assembly CMakeFiles/emu.dir/ram.c.s"
+	cd /home/shahzaibsidd/projects/gbEmulator/build/lib && /usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /home/shahzaibsidd/projects/gbEmulator/lib/ram.c -o CMakeFiles/emu.dir/ram.c.s
+
 lib/CMakeFiles/emu.dir/timer.c.o: lib/CMakeFiles/emu.dir/flags.make
 lib/CMakeFiles/emu.dir/timer.c.o: /home/shahzaibsidd/projects/gbEmulator/lib/timer.c
 lib/CMakeFiles/emu.dir/timer.c.o: lib/CMakeFiles/emu.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/shahzaibsidd/projects/gbEmulator/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_10) "Building C object lib/CMakeFiles/emu.dir/timer.c.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/shahzaibsidd/projects/gbEmulator/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_11) "Building C object lib/CMakeFiles/emu.dir/timer.c.o"
 	cd /home/shahzaibsidd/projects/gbEmulator/build/lib && /usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT lib/CMakeFiles/emu.dir/timer.c.o -MF CMakeFiles/emu.dir/timer.c.o.d -o CMakeFiles/emu.dir/timer.c.o -c /home/shahzaibsidd/projects/gbEmulator/lib/timer.c
 
 lib/CMakeFiles/emu.dir/timer.c.i: cmake_force
@@ -220,6 +234,7 @@ emu_OBJECTS = \
 "CMakeFiles/emu.dir/emu.c.o" \
 "CMakeFiles/emu.dir/instructions.c.o" \
 "CMakeFiles/emu.dir/ppu.c.o" \
+"CMakeFiles/emu.dir/ram.c.o" \
 "CMakeFiles/emu.dir/timer.c.o"
 
 # External object files for target emu
@@ -234,10 +249,11 @@ lib/libemu.a: lib/CMakeFiles/emu.dir/cpu_util.c.o
 lib/libemu.a: lib/CMakeFiles/emu.dir/emu.c.o
 lib/libemu.a: lib/CMakeFiles/emu.dir/instructions.c.o
 lib/libemu.a: lib/CMakeFiles/emu.dir/ppu.c.o
+lib/libemu.a: lib/CMakeFiles/emu.dir/ram.c.o
 lib/libemu.a: lib/CMakeFiles/emu.dir/timer.c.o
 lib/libemu.a: lib/CMakeFiles/emu.dir/build.make
 lib/libemu.a: lib/CMakeFiles/emu.dir/link.txt
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --bold --progress-dir=/home/shahzaibsidd/projects/gbEmulator/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_11) "Linking C static library libemu.a"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --bold --progress-dir=/home/shahzaibsidd/projects/gbEmulator/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_12) "Linking C static library libemu.a"
 	cd /home/shahzaibsidd/projects/gbEmulator/build/lib && $(CMAKE_COMMAND) -P CMakeFiles/emu.dir/cmake_clean_target.cmake
 	cd /home/shahzaibsidd/projects/gbEmulator/build/lib && $(CMAKE_COMMAND) -E cmake_link_script CMakeFiles/emu.dir/link.txt --verbose=$(VERBOSE)
 

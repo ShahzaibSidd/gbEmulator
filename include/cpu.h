@@ -30,19 +30,23 @@ typedef struct {
     bool stepping;
 
     bool int_master_enabled;
+    u8 ie_register;
 
 } cpu_context;
 
-u16 cpu_read_reg(reg_type rt);
-u16 cpu_set_reg(reg_type rt, u16 val);
+typedef void (*IN_PROC)(cpu_context *);
+IN_PROC inst_get_processor(in_type type);
 
 void cpu_init();
 bool cpu_step();
-
-typedef void (*IN_PROC)(cpu_context *);
-IN_PROC inst_get_processor(in_type type);
 
 #define CPU_FLAG_Z BIT(ctx->regs.f, 7);
 #define CPU_FLAG_N BIT(ctx->regs.f, 6);
 #define CPU_FLAG_H BIT(ctx->regs.f, 5);
 #define CPU_FLAG_C BIT(ctx->regs.f, 4);
+
+u16 cpu_read_reg(reg_type rt);
+u16 cpu_set_reg(reg_type rt, u16 val);
+
+u8 cpu_get_ie_register();
+void cpu_set_ie_register(u8 value);
