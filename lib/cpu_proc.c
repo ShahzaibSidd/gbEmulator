@@ -1,6 +1,7 @@
 #include <cpu.h>
 #include <emu.h>
 #include <bus.h>
+#include <stack.h>
 
 //where the emulator processes cpu intructions
 
@@ -82,11 +83,87 @@ static void proc_ldh(cpu_context *ctx) {
     }
 }
 
-static void proc_jp(cpu_context *ctx) {
+static void goto_addr(cpu_context *ctx, u16 addr, bool pushpc) {
     if (check_cond(ctx)) {
-        ctx->regs.pc = ctx->fetched_data;
+        if (pushpc) {
+            emu_cycles(2);
+            stack_push16(ctx->regs.pc);
+        }
+
+        ctx->regs.pc = addr;
         emu_cycles(1);
     }
+}
+
+static void proc_jp(cpu_context *ctx) {
+    goto_addr(ctx, ctx->fetched_data, false);
+}
+
+static void proc_jr(cpu_context *ctx) {
+    char temp = (char)(ctx->fetched_data) & 0xFF;
+    u16 address = ctx->regs.pc + temp;
+    goto_addr(ctx, address, false);
+}
+
+static void proc_call(cpu_context *ctx) {
+    goto_addr(ctx, ctx->fetched_data, true);
+}
+
+static void proc_rst(cpu_context *ctx) {
+    goto_addr(ctx, ctx->cur_inst->param, true);
+}
+
+static void proc_ret(cpu_context *ctx) {
+    if (ctx->cur_inst->cond != CT_NONE) {
+        emu_cycles(1);
+    }
+
+    if (check_cond(ctx)) {
+        u16 low = stack_pop();
+        emu_cycles(1);
+        u16 high = stack_pop();
+        emu_cycles(1);
+
+        u16 address = low | (high<<8);
+        ctx->regs.pc = address;
+
+        emu_cycles(1);
+    }
+}
+
+static void proc_reti(cpu_context *ctx) {
+    //same as proc_ret, just enabling the interrupt variable;
+    ctx->int_master_enabled = true;
+    proc_ret(ctx);
+}
+
+static void proc_pop(cpu_context *ctx) {
+    u16 val_low = stack_pop();
+    emu_cycles(1);
+    u16 val_high = stack_pop();
+
+    u16 val = val_low | (val_high << 8);
+
+    cpu_set_reg(ctx->cur_inst->reg_1, val);
+
+    if (ctx->cur_inst->reg_1 == RT_AF) {
+        cpu_set_reg(ctx->cur_inst->reg_1, val & 0xFFF0);
+    }
+}
+
+static void proc_push(cpu_context *ctx) {
+    u16 val = cpu_read_reg(ctx->cur_inst->reg_1);
+    u16 val_high = (val >> 8) & 0x00FF;
+    emu_cycles(1);
+    stack_push(val_high);
+
+    u16 val_low = val & 0x00FF; 
+    emu_cycles(1);
+    stack_push(val_low);
+
+    emu_cycles(1);
+
+    return;
 }
 
 static void proc_di(cpu_context *ctx) {
@@ -105,6 +182,13 @@ static IN_PROC processors[] = {
     [IN_LD] = proc_ld,
     [IN_LDH] = proc_ldh,
     [IN_JP] = proc_jp,
+    [IN_JR] = proc_jr,
+    [IN_CALL] = proc_call,
+    [IN_RST] = proc_rst,
+    [IN_RET] = proc_ret,
+    [IN_RETI] = proc_reti,
+    [IN_POP] = proc_pop,
+    [IN_PUSH] = proc_push,
     [IN_DI] = proc_di,
     [IN_XOR] = proc_xor,
 };

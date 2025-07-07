@@ -34,6 +34,8 @@ typedef struct {
 
 } cpu_context;
 
+cpu_registers *cpu_get_regs();
+
 typedef void (*IN_PROC)(cpu_context *);
 IN_PROC inst_get_processor(in_type type);
 

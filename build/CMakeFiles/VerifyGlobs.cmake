@@ -13,6 +13,7 @@ set(OLD_GLOB
   "/home/shahzaibsidd/projects/gbEmulator/include/instructions.h"
   "/home/shahzaibsidd/projects/gbEmulator/include/ppu.h"
   "/home/shahzaibsidd/projects/gbEmulator/include/ram.h"
+  "/home/shahzaibsidd/projects/gbEmulator/include/stack.h"
   "/home/shahzaibsidd/projects/gbEmulator/include/timer.h"
   )
 if(NOT "${NEW_GLOB}" STREQUAL "${OLD_GLOB}")
@@ -33,6 +34,7 @@ set(OLD_GLOB
   "/home/shahzaibsidd/projects/gbEmulator/lib/instructions.c"
   "/home/shahzaibsidd/projects/gbEmulator/lib/ppu.c"
   "/home/shahzaibsidd/projects/gbEmulator/lib/ram.c"
+  "/home/shahzaibsidd/projects/gbEmulator/lib/stack.c"
   "/home/shahzaibsidd/projects/gbEmulator/lib/timer.c"
   )
 if(NOT "${NEW_GLOB}" STREQUAL "${OLD_GLOB}")
