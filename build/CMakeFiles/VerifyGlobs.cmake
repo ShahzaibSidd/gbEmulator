@@ -10,7 +10,11 @@ set(OLD_GLOB
   "/home/shahzaibsidd/projects/gbEmulator/include/common.h"
   "/home/shahzaibsidd/projects/gbEmulator/include/cpu.h"
   "/home/shahzaibsidd/projects/gbEmulator/include/emu.h"
+  "/home/shahzaibsidd/projects/gbEmulator/include/instructions.h"
+  "/home/shahzaibsidd/projects/gbEmulator/include/interrupts.h"
   "/home/shahzaibsidd/projects/gbEmulator/include/ppu.h"
+  "/home/shahzaibsidd/projects/gbEmulator/include/ram.h"
+  "/home/shahzaibsidd/projects/gbEmulator/include/stack.h"
   "/home/shahzaibsidd/projects/gbEmulator/include/timer.h"
   )
 if(NOT "${NEW_GLOB}" STREQUAL "${OLD_GLOB}")
@@ -24,8 +28,15 @@ set(OLD_GLOB
   "/home/shahzaibsidd/projects/gbEmulator/lib/bus.c"
   "/home/shahzaibsidd/projects/gbEmulator/lib/cart.c"
   "/home/shahzaibsidd/projects/gbEmulator/lib/cpu.c"
+  "/home/shahzaibsidd/projects/gbEmulator/lib/cpu_fetch.c"
+  "/home/shahzaibsidd/projects/gbEmulator/lib/cpu_proc.c"
+  "/home/shahzaibsidd/projects/gbEmulator/lib/cpu_util.c"
   "/home/shahzaibsidd/projects/gbEmulator/lib/emu.c"
+  "/home/shahzaibsidd/projects/gbEmulator/lib/instructions.c"
+  "/home/shahzaibsidd/projects/gbEmulator/lib/interrupts.c"
   "/home/shahzaibsidd/projects/gbEmulator/lib/ppu.c"
+  "/home/shahzaibsidd/projects/gbEmulator/lib/ram.c"
+  "/home/shahzaibsidd/projects/gbEmulator/lib/stack.c"
   "/home/shahzaibsidd/projects/gbEmulator/lib/timer.c"
   )
 if(NOT "${NEW_GLOB}" STREQUAL "${OLD_GLOB}")

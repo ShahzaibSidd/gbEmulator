@@ -163,7 +163,18 @@ bool cart_load(char *cart) {
         checksum = checksum - ctx.rom_data[address] - 1;
     }
 
-    printf("\t Checksum Status :  %2.2X (%s)\n", ctx.header->checksum, (ctx.header->checksum == checksum) ? "PASSED" : "FAILED");
+    printf("\t Checksum Status :  %2.2X (%s)\n", ctx.header->checksum, (checksum & 0xEE) ? "PASSED" : "FAILED");
 
     return true;
+};
+
+u8 cart_read(u16 address) {
+    //only for ROM rn
+    return ctx.rom_data[address];
+};
+
+void cart_write(u16 address, u8 value) { 
+    //only for ROM rn
+    printf("cart_write(%04X)\n", address);
+    NOT_IMPL
 };

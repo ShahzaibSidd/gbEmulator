@@ -11,8 +11,15 @@ set(CMAKE_DEPENDS_DEPENDENCY_FILES
   "/home/shahzaibsidd/projects/gbEmulator/lib/bus.c" "lib/CMakeFiles/emu.dir/bus.c.o" "gcc" "lib/CMakeFiles/emu.dir/bus.c.o.d"
   "/home/shahzaibsidd/projects/gbEmulator/lib/cart.c" "lib/CMakeFiles/emu.dir/cart.c.o" "gcc" "lib/CMakeFiles/emu.dir/cart.c.o.d"
   "/home/shahzaibsidd/projects/gbEmulator/lib/cpu.c" "lib/CMakeFiles/emu.dir/cpu.c.o" "gcc" "lib/CMakeFiles/emu.dir/cpu.c.o.d"
+  "/home/shahzaibsidd/projects/gbEmulator/lib/cpu_fetch.c" "lib/CMakeFiles/emu.dir/cpu_fetch.c.o" "gcc" "lib/CMakeFiles/emu.dir/cpu_fetch.c.o.d"
+  "/home/shahzaibsidd/projects/gbEmulator/lib/cpu_proc.c" "lib/CMakeFiles/emu.dir/cpu_proc.c.o" "gcc" "lib/CMakeFiles/emu.dir/cpu_proc.c.o.d"
+  "/home/shahzaibsidd/projects/gbEmulator/lib/cpu_util.c" "lib/CMakeFiles/emu.dir/cpu_util.c.o" "gcc" "lib/CMakeFiles/emu.dir/cpu_util.c.o.d"
   "/home/shahzaibsidd/projects/gbEmulator/lib/emu.c" "lib/CMakeFiles/emu.dir/emu.c.o" "gcc" "lib/CMakeFiles/emu.dir/emu.c.o.d"
+  "/home/shahzaibsidd/projects/gbEmulator/lib/instructions.c" "lib/CMakeFiles/emu.dir/instructions.c.o" "gcc" "lib/CMakeFiles/emu.dir/instructions.c.o.d"
+  "/home/shahzaibsidd/projects/gbEmulator/lib/interrupts.c" "lib/CMakeFiles/emu.dir/interrupts.c.o" "gcc" "lib/CMakeFiles/emu.dir/interrupts.c.o.d"
   "/home/shahzaibsidd/projects/gbEmulator/lib/ppu.c" "lib/CMakeFiles/emu.dir/ppu.c.o" "gcc" "lib/CMakeFiles/emu.dir/ppu.c.o.d"
+  "/home/shahzaibsidd/projects/gbEmulator/lib/ram.c" "lib/CMakeFiles/emu.dir/ram.c.o" "gcc" "lib/CMakeFiles/emu.dir/ram.c.o.d"
+  "/home/shahzaibsidd/projects/gbEmulator/lib/stack.c" "lib/CMakeFiles/emu.dir/stack.c.o" "gcc" "lib/CMakeFiles/emu.dir/stack.c.o.d"
   "/home/shahzaibsidd/projects/gbEmulator/lib/timer.c" "lib/CMakeFiles/emu.dir/timer.c.o" "gcc" "lib/CMakeFiles/emu.dir/timer.c.o.d"
   )
 
