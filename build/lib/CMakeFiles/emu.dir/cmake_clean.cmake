@@ -15,6 +15,8 @@ file(REMOVE_RECURSE
   "CMakeFiles/emu.dir/emu.c.o.d"
   "CMakeFiles/emu.dir/instructions.c.o"
   "CMakeFiles/emu.dir/instructions.c.o.d"
+  "CMakeFiles/emu.dir/interrupts.c.o"
+  "CMakeFiles/emu.dir/interrupts.c.o.d"
   "CMakeFiles/emu.dir/ppu.c.o"
   "CMakeFiles/emu.dir/ppu.c.o.d"
   "CMakeFiles/emu.dir/ram.c.o"

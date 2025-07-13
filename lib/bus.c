@@ -38,7 +38,8 @@ u8 bus_read(u16 address) {
         //object attribute memory
         //TODO
         printf("NOT SUPPORTED: bus_read(%04X)\n", address);
-        NOT_IMPL
+        //NOT_IMPL
+        return 0;
     } else if (address < 0xFF00) {
         //Reserved (not gonna use)
         return 0;
@@ -47,6 +48,7 @@ u8 bus_read(u16 address) {
         //TODO
         printf("NOT SUPPORTED: bus_read(%04X)\n", address);
         //NOT_IMPL
+        return 0;
     } else if (address == 0xFFFF) {
         //Interrupt enable register
         return cpu_get_ie_register();
@@ -71,7 +73,7 @@ void bus_write(u16 address, u8 value) {
         //Map and character data
         //TODO
         printf("NOT SUPPORTED: bus_write(%04X)\n", address);
-        NOT_IMPL
+        //NOT_IMPL
     } else if (address < 0xC000) {
         //Cartridge RAM
         cart_write(address, value);
@@ -84,7 +86,7 @@ void bus_write(u16 address, u8 value) {
         //object attribute memory
         //TODO
         printf("NOT SUPPORTED: bus_write(%04X)\n", address);
-        NOT_IMPL
+        //NOT_IMPL
     } else if (address < 0xFF00) {
         //Reserved (not gonna use)
     } else if (address < 0xFF80) {

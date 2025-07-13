@@ -378,6 +378,30 @@ instructions.c.s:
 	cd /home/shahzaibsidd/projects/gbEmulator/build && $(MAKE) $(MAKESILENT) -f lib/CMakeFiles/emu.dir/build.make lib/CMakeFiles/emu.dir/instructions.c.s
 .PHONY : instructions.c.s
 
+interrupts.o: interrupts.c.o
+.PHONY : interrupts.o
+
+# target to build an object file
+interrupts.c.o:
+	cd /home/shahzaibsidd/projects/gbEmulator/build && $(MAKE) $(MAKESILENT) -f lib/CMakeFiles/emu.dir/build.make lib/CMakeFiles/emu.dir/interrupts.c.o
+.PHONY : interrupts.c.o
+
+interrupts.i: interrupts.c.i
+.PHONY : interrupts.i
+
+# target to preprocess a source file
+interrupts.c.i:
+	cd /home/shahzaibsidd/projects/gbEmulator/build && $(MAKE) $(MAKESILENT) -f lib/CMakeFiles/emu.dir/build.make lib/CMakeFiles/emu.dir/interrupts.c.i
+.PHONY : interrupts.c.i
+
+interrupts.s: interrupts.c.s
+.PHONY : interrupts.s
+
+# target to generate assembly for a file
+interrupts.c.s:
+	cd /home/shahzaibsidd/projects/gbEmulator/build && $(MAKE) $(MAKESILENT) -f lib/CMakeFiles/emu.dir/build.make lib/CMakeFiles/emu.dir/interrupts.c.s
+.PHONY : interrupts.c.s
+
 ppu.o: ppu.c.o
 .PHONY : ppu.o
 
@@ -512,6 +536,9 @@ help:
 	@echo "... instructions.o"
 	@echo "... instructions.i"
 	@echo "... instructions.s"
+	@echo "... interrupts.o"
+	@echo "... interrupts.i"
+	@echo "... interrupts.s"
 	@echo "... ppu.o"
 	@echo "... ppu.i"
 	@echo "... ppu.s"

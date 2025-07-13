@@ -1,5 +1,5 @@
-lib/CMakeFiles/emu.dir/cpu_util.c.o: \
- /home/shahzaibsidd/projects/gbEmulator/lib/cpu_util.c \
+lib/CMakeFiles/emu.dir/interrupts.c.o: \
+ /home/shahzaibsidd/projects/gbEmulator/lib/interrupts.c \
  /usr/include/stdc-predef.h \
  /home/shahzaibsidd/projects/gbEmulator/include/cpu.h \
  /home/shahzaibsidd/projects/gbEmulator/include/common.h \
@@ -57,4 +57,5 @@ lib/CMakeFiles/emu.dir/cpu_util.c.o: \
  /usr/include/x86_64-linux-gnu/bits/struct_rwlock.h /usr/include/alloca.h \
  /usr/include/x86_64-linux-gnu/bits/stdlib-float.h \
  /home/shahzaibsidd/projects/gbEmulator/include/instructions.h \
- /home/shahzaibsidd/projects/gbEmulator/include/bus.h
+ /home/shahzaibsidd/projects/gbEmulator/include/stack.h \
+ /home/shahzaibsidd/projects/gbEmulator/include/interrupts.h
