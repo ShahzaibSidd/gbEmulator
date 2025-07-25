@@ -1,6 +1,8 @@
 {
     "files.associations": {
         "emu.h": "c",
-        "instructions.h": "c"
+        "instructions.h": "c",
+        "bus.h": "c",
+        "cpu.h": "c"
     }
 }

@@ -8,7 +8,6 @@ u16 reverse(u16 n) {
 };
 
 u16 cpu_read_reg(reg_type rt) {
-    u16 combined;
     switch (rt) {
         case RT_A: return ctx.regs.a;
         case RT_F: return ctx.regs.f;

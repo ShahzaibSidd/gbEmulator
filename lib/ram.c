@@ -10,6 +10,11 @@ static ram_context ctx;
 u8 wram_read(u16 address) {
     //wram address in memory starts at 0xC000
     address -= 0xC000;
+
+    if (address >= 0x2000) {
+        printf("INVALID WRAM ADDR %08X\n", address + 0xC000);
+        exit(-1);
+    }
     return ctx.wram[address];
 }
 

@@ -153,10 +153,24 @@ lib/CMakeFiles/emu.dir/cpu_util.c.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling C source to assembly CMakeFiles/emu.dir/cpu_util.c.s"
 	cd /home/shahzaibsidd/projects/gbEmulator/build/lib && /usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /home/shahzaibsidd/projects/gbEmulator/lib/cpu_util.c -o CMakeFiles/emu.dir/cpu_util.c.s
 
+lib/CMakeFiles/emu.dir/debug.c.o: lib/CMakeFiles/emu.dir/flags.make
+lib/CMakeFiles/emu.dir/debug.c.o: /home/shahzaibsidd/projects/gbEmulator/lib/debug.c
+lib/CMakeFiles/emu.dir/debug.c.o: lib/CMakeFiles/emu.dir/compiler_depend.ts
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/shahzaibsidd/projects/gbEmulator/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_7) "Building C object lib/CMakeFiles/emu.dir/debug.c.o"
+	cd /home/shahzaibsidd/projects/gbEmulator/build/lib && /usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT lib/CMakeFiles/emu.dir/debug.c.o -MF CMakeFiles/emu.dir/debug.c.o.d -o CMakeFiles/emu.dir/debug.c.o -c /home/shahzaibsidd/projects/gbEmulator/lib/debug.c
+
+lib/CMakeFiles/emu.dir/debug.c.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing C source to CMakeFiles/emu.dir/debug.c.i"
+	cd /home/shahzaibsidd/projects/gbEmulator/build/lib && /usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /home/shahzaibsidd/projects/gbEmulator/lib/debug.c > CMakeFiles/emu.dir/debug.c.i
+
+lib/CMakeFiles/emu.dir/debug.c.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling C source to assembly CMakeFiles/emu.dir/debug.c.s"
+	cd /home/shahzaibsidd/projects/gbEmulator/build/lib && /usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /home/shahzaibsidd/projects/gbEmulator/lib/debug.c -o CMakeFiles/emu.dir/debug.c.s
+
 lib/CMakeFiles/emu.dir/emu.c.o: lib/CMakeFiles/emu.dir/flags.make
 lib/CMakeFiles/emu.dir/emu.c.o: /home/shahzaibsidd/projects/gbEmulator/lib/emu.c
 lib/CMakeFiles/emu.dir/emu.c.o: lib/CMakeFiles/emu.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/shahzaibsidd/projects/gbEmulator/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_7) "Building C object lib/CMakeFiles/emu.dir/emu.c.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/shahzaibsidd/projects/gbEmulator/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_8) "Building C object lib/CMakeFiles/emu.dir/emu.c.o"
 	cd /home/shahzaibsidd/projects/gbEmulator/build/lib && /usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT lib/CMakeFiles/emu.dir/emu.c.o -MF CMakeFiles/emu.dir/emu.c.o.d -o CMakeFiles/emu.dir/emu.c.o -c /home/shahzaibsidd/projects/gbEmulator/lib/emu.c
 
 lib/CMakeFiles/emu.dir/emu.c.i: cmake_force
@@ -170,7 +184,7 @@ lib/CMakeFiles/emu.dir/emu.c.s: cmake_force
 lib/CMakeFiles/emu.dir/instructions.c.o: lib/CMakeFiles/emu.dir/flags.make
 lib/CMakeFiles/emu.dir/instructions.c.o: /home/shahzaibsidd/projects/gbEmulator/lib/instructions.c
 lib/CMakeFiles/emu.dir/instructions.c.o: lib/CMakeFiles/emu.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/shahzaibsidd/projects/gbEmulator/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_8) "Building C object lib/CMakeFiles/emu.dir/instructions.c.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/shahzaibsidd/projects/gbEmulator/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_9) "Building C object lib/CMakeFiles/emu.dir/instructions.c.o"
 	cd /home/shahzaibsidd/projects/gbEmulator/build/lib && /usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT lib/CMakeFiles/emu.dir/instructions.c.o -MF CMakeFiles/emu.dir/instructions.c.o.d -o CMakeFiles/emu.dir/instructions.c.o -c /home/shahzaibsidd/projects/gbEmulator/lib/instructions.c
 
 lib/CMakeFiles/emu.dir/instructions.c.i: cmake_force
@@ -184,7 +198,7 @@ lib/CMakeFiles/emu.dir/instructions.c.s: cmake_force
 lib/CMakeFiles/emu.dir/interrupts.c.o: lib/CMakeFiles/emu.dir/flags.make
 lib/CMakeFiles/emu.dir/interrupts.c.o: /home/shahzaibsidd/projects/gbEmulator/lib/interrupts.c
 lib/CMakeFiles/emu.dir/interrupts.c.o: lib/CMakeFiles/emu.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/shahzaibsidd/projects/gbEmulator/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_9) "Building C object lib/CMakeFiles/emu.dir/interrupts.c.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/shahzaibsidd/projects/gbEmulator/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_10) "Building C object lib/CMakeFiles/emu.dir/interrupts.c.o"
 	cd /home/shahzaibsidd/projects/gbEmulator/build/lib && /usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT lib/CMakeFiles/emu.dir/interrupts.c.o -MF CMakeFiles/emu.dir/interrupts.c.o.d -o CMakeFiles/emu.dir/interrupts.c.o -c /home/shahzaibsidd/projects/gbEmulator/lib/interrupts.c
 
 lib/CMakeFiles/emu.dir/interrupts.c.i: cmake_force
@@ -195,10 +209,24 @@ lib/CMakeFiles/emu.dir/interrupts.c.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling C source to assembly CMakeFiles/emu.dir/interrupts.c.s"
 	cd /home/shahzaibsidd/projects/gbEmulator/build/lib && /usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /home/shahzaibsidd/projects/gbEmulator/lib/interrupts.c -o CMakeFiles/emu.dir/interrupts.c.s
 
+lib/CMakeFiles/emu.dir/io.c.o: lib/CMakeFiles/emu.dir/flags.make
+lib/CMakeFiles/emu.dir/io.c.o: /home/shahzaibsidd/projects/gbEmulator/lib/io.c
+lib/CMakeFiles/emu.dir/io.c.o: lib/CMakeFiles/emu.dir/compiler_depend.ts
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/shahzaibsidd/projects/gbEmulator/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_11) "Building C object lib/CMakeFiles/emu.dir/io.c.o"
+	cd /home/shahzaibsidd/projects/gbEmulator/build/lib && /usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT lib/CMakeFiles/emu.dir/io.c.o -MF CMakeFiles/emu.dir/io.c.o.d -o CMakeFiles/emu.dir/io.c.o -c /home/shahzaibsidd/projects/gbEmulator/lib/io.c
+
+lib/CMakeFiles/emu.dir/io.c.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing C source to CMakeFiles/emu.dir/io.c.i"
+	cd /home/shahzaibsidd/projects/gbEmulator/build/lib && /usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /home/shahzaibsidd/projects/gbEmulator/lib/io.c > CMakeFiles/emu.dir/io.c.i
+
+lib/CMakeFiles/emu.dir/io.c.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling C source to assembly CMakeFiles/emu.dir/io.c.s"
+	cd /home/shahzaibsidd/projects/gbEmulator/build/lib && /usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /home/shahzaibsidd/projects/gbEmulator/lib/io.c -o CMakeFiles/emu.dir/io.c.s
+
 lib/CMakeFiles/emu.dir/ppu.c.o: lib/CMakeFiles/emu.dir/flags.make
 lib/CMakeFiles/emu.dir/ppu.c.o: /home/shahzaibsidd/projects/gbEmulator/lib/ppu.c
 lib/CMakeFiles/emu.dir/ppu.c.o: lib/CMakeFiles/emu.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/shahzaibsidd/projects/gbEmulator/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_10) "Building C object lib/CMakeFiles/emu.dir/ppu.c.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/shahzaibsidd/projects/gbEmulator/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_12) "Building C object lib/CMakeFiles/emu.dir/ppu.c.o"
 	cd /home/shahzaibsidd/projects/gbEmulator/build/lib && /usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT lib/CMakeFiles/emu.dir/ppu.c.o -MF CMakeFiles/emu.dir/ppu.c.o.d -o CMakeFiles/emu.dir/ppu.c.o -c /home/shahzaibsidd/projects/gbEmulator/lib/ppu.c
 
 lib/CMakeFiles/emu.dir/ppu.c.i: cmake_force
@@ -212,7 +240,7 @@ lib/CMakeFiles/emu.dir/ppu.c.s: cmake_force
 lib/CMakeFiles/emu.dir/ram.c.o: lib/CMakeFiles/emu.dir/flags.make
 lib/CMakeFiles/emu.dir/ram.c.o: /home/shahzaibsidd/projects/gbEmulator/lib/ram.c
 lib/CMakeFiles/emu.dir/ram.c.o: lib/CMakeFiles/emu.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/shahzaibsidd/projects/gbEmulator/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_11) "Building C object lib/CMakeFiles/emu.dir/ram.c.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/shahzaibsidd/projects/gbEmulator/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_13) "Building C object lib/CMakeFiles/emu.dir/ram.c.o"
 	cd /home/shahzaibsidd/projects/gbEmulator/build/lib && /usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT lib/CMakeFiles/emu.dir/ram.c.o -MF CMakeFiles/emu.dir/ram.c.o.d -o CMakeFiles/emu.dir/ram.c.o -c /home/shahzaibsidd/projects/gbEmulator/lib/ram.c
 
 lib/CMakeFiles/emu.dir/ram.c.i: cmake_force
@@ -226,7 +254,7 @@ lib/CMakeFiles/emu.dir/ram.c.s: cmake_force
 lib/CMakeFiles/emu.dir/stack.c.o: lib/CMakeFiles/emu.dir/flags.make
 lib/CMakeFiles/emu.dir/stack.c.o: /home/shahzaibsidd/projects/gbEmulator/lib/stack.c
 lib/CMakeFiles/emu.dir/stack.c.o: lib/CMakeFiles/emu.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/shahzaibsidd/projects/gbEmulator/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_12) "Building C object lib/CMakeFiles/emu.dir/stack.c.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/shahzaibsidd/projects/gbEmulator/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_14) "Building C object lib/CMakeFiles/emu.dir/stack.c.o"
 	cd /home/shahzaibsidd/projects/gbEmulator/build/lib && /usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT lib/CMakeFiles/emu.dir/stack.c.o -MF CMakeFiles/emu.dir/stack.c.o.d -o CMakeFiles/emu.dir/stack.c.o -c /home/shahzaibsidd/projects/gbEmulator/lib/stack.c
 
 lib/CMakeFiles/emu.dir/stack.c.i: cmake_force
@@ -240,7 +268,7 @@ lib/CMakeFiles/emu.dir/stack.c.s: cmake_force
 lib/CMakeFiles/emu.dir/timer.c.o: lib/CMakeFiles/emu.dir/flags.make
 lib/CMakeFiles/emu.dir/timer.c.o: /home/shahzaibsidd/projects/gbEmulator/lib/timer.c
 lib/CMakeFiles/emu.dir/timer.c.o: lib/CMakeFiles/emu.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/shahzaibsidd/projects/gbEmulator/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_13) "Building C object lib/CMakeFiles/emu.dir/timer.c.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/shahzaibsidd/projects/gbEmulator/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_15) "Building C object lib/CMakeFiles/emu.dir/timer.c.o"
 	cd /home/shahzaibsidd/projects/gbEmulator/build/lib && /usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT lib/CMakeFiles/emu.dir/timer.c.o -MF CMakeFiles/emu.dir/timer.c.o.d -o CMakeFiles/emu.dir/timer.c.o -c /home/shahzaibsidd/projects/gbEmulator/lib/timer.c
 
 lib/CMakeFiles/emu.dir/timer.c.i: cmake_force
@@ -251,6 +279,20 @@ lib/CMakeFiles/emu.dir/timer.c.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling C source to assembly CMakeFiles/emu.dir/timer.c.s"
 	cd /home/shahzaibsidd/projects/gbEmulator/build/lib && /usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /home/shahzaibsidd/projects/gbEmulator/lib/timer.c -o CMakeFiles/emu.dir/timer.c.s
 
+lib/CMakeFiles/emu.dir/ui.c.o: lib/CMakeFiles/emu.dir/flags.make
+lib/CMakeFiles/emu.dir/ui.c.o: /home/shahzaibsidd/projects/gbEmulator/lib/ui.c
+lib/CMakeFiles/emu.dir/ui.c.o: lib/CMakeFiles/emu.dir/compiler_depend.ts
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/home/shahzaibsidd/projects/gbEmulator/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_16) "Building C object lib/CMakeFiles/emu.dir/ui.c.o"
+	cd /home/shahzaibsidd/projects/gbEmulator/build/lib && /usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT lib/CMakeFiles/emu.dir/ui.c.o -MF CMakeFiles/emu.dir/ui.c.o.d -o CMakeFiles/emu.dir/ui.c.o -c /home/shahzaibsidd/projects/gbEmulator/lib/ui.c
+
+lib/CMakeFiles/emu.dir/ui.c.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing C source to CMakeFiles/emu.dir/ui.c.i"
+	cd /home/shahzaibsidd/projects/gbEmulator/build/lib && /usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /home/shahzaibsidd/projects/gbEmulator/lib/ui.c > CMakeFiles/emu.dir/ui.c.i
+
+lib/CMakeFiles/emu.dir/ui.c.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling C source to assembly CMakeFiles/emu.dir/ui.c.s"
+	cd /home/shahzaibsidd/projects/gbEmulator/build/lib && /usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /home/shahzaibsidd/projects/gbEmulator/lib/ui.c -o CMakeFiles/emu.dir/ui.c.s
+
 # Object files for target emu
 emu_OBJECTS = \
 "CMakeFiles/emu.dir/bus.c.o" \
@@ -259,13 +301,16 @@ emu_OBJECTS = \
 "CMakeFiles/emu.dir/cpu_fetch.c.o" \
 "CMakeFiles/emu.dir/cpu_proc.c.o" \
 "CMakeFiles/emu.dir/cpu_util.c.o" \
+"CMakeFiles/emu.dir/debug.c.o" \
 "CMakeFiles/emu.dir/emu.c.o" \
 "CMakeFiles/emu.dir/instructions.c.o" \
 "CMakeFiles/emu.dir/interrupts.c.o" \
+"CMakeFiles/emu.dir/io.c.o" \
 "CMakeFiles/emu.dir/ppu.c.o" \
 "CMakeFiles/emu.dir/ram.c.o" \
 "CMakeFiles/emu.dir/stack.c.o" \
-"CMakeFiles/emu.dir/timer.c.o"
+"CMakeFiles/emu.dir/timer.c.o" \
+"CMakeFiles/emu.dir/ui.c.o"
 
 # External object files for target emu
 emu_EXTERNAL_OBJECTS =
@@ -276,16 +321,19 @@ lib/libemu.a: lib/CMakeFiles/emu.dir/cpu.c.o
 lib/libemu.a: lib/CMakeFiles/emu.dir/cpu_fetch.c.o
 lib/libemu.a: lib/CMakeFiles/emu.dir/cpu_proc.c.o
 lib/libemu.a: lib/CMakeFiles/emu.dir/cpu_util.c.o
+lib/libemu.a: lib/CMakeFiles/emu.dir/debug.c.o
 lib/libemu.a: lib/CMakeFiles/emu.dir/emu.c.o
 lib/libemu.a: lib/CMakeFiles/emu.dir/instructions.c.o
 lib/libemu.a: lib/CMakeFiles/emu.dir/interrupts.c.o
+lib/libemu.a: lib/CMakeFiles/emu.dir/io.c.o
 lib/libemu.a: lib/CMakeFiles/emu.dir/ppu.c.o
 lib/libemu.a: lib/CMakeFiles/emu.dir/ram.c.o
 lib/libemu.a: lib/CMakeFiles/emu.dir/stack.c.o
 lib/libemu.a: lib/CMakeFiles/emu.dir/timer.c.o
+lib/libemu.a: lib/CMakeFiles/emu.dir/ui.c.o
 lib/libemu.a: lib/CMakeFiles/emu.dir/build.make
 lib/libemu.a: lib/CMakeFiles/emu.dir/link.txt
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --bold --progress-dir=/home/shahzaibsidd/projects/gbEmulator/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_14) "Linking C static library libemu.a"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --bold --progress-dir=/home/shahzaibsidd/projects/gbEmulator/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_17) "Linking C static library libemu.a"
 	cd /home/shahzaibsidd/projects/gbEmulator/build/lib && $(CMAKE_COMMAND) -P CMakeFiles/emu.dir/cmake_clean_target.cmake
 	cd /home/shahzaibsidd/projects/gbEmulator/build/lib && $(CMAKE_COMMAND) -E cmake_link_script CMakeFiles/emu.dir/link.txt --verbose=$(VERBOSE)
 

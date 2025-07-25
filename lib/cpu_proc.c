@@ -35,7 +35,7 @@ static bool check_cond(cpu_context *ctx) {
 }
 
 static bool is_16bit(reg_type rt) {
-    return rt > RT_AF;
+    return rt >= RT_AF;
 }
 
 reg_type rt_lookup[] = {
@@ -254,39 +254,42 @@ static void proc_cp(cpu_context *ctx) {
 
 static void proc_ld(cpu_context *ctx) {
     if (ctx->dest_is_mem) {
-
         if (is_16bit(ctx->cur_inst->reg_2)) {
             emu_cycles(1);
             bus_write16(ctx->mem_dest, ctx->fetched_data);
         } else {
             bus_write(ctx->mem_dest, ctx->fetched_data);
         }
+
+        emu_cycles(1);
         return;
     }
 
     if (ctx->cur_inst->mode == AM_HL_SPR) {
         u8 hflag = (cpu_read_reg(ctx->cur_inst->reg_2) & 0xF) + 
-        (ctx->fetched_data & 0xF) >= 0x10; 
+            (ctx->fetched_data & 0xF) >= 0x10;
 
         u8 cflag = (cpu_read_reg(ctx->cur_inst->reg_2) & 0xFF) + 
-        (ctx->fetched_data & 0xFF) >= 0x100;
-        
-        cpu_set_flags(ctx, 0, 0, hflag, cflag);
+            (ctx->fetched_data & 0xFF) >= 0x100;
 
-        cpu_set_reg(ctx->cur_inst->reg_1,
-                    (cpu_read_reg(ctx->cur_inst->reg_2) + (char)ctx->fetched_data));
+        cpu_set_flags(ctx, 0, 0, hflag, cflag);
+        cpu_set_reg(ctx->cur_inst->reg_1, 
+            cpu_read_reg(ctx->cur_inst->reg_2) + (char)ctx->fetched_data);
+
+        return;
     }
 
     cpu_set_reg(ctx->cur_inst->reg_1, ctx->fetched_data);
-    return;
 }
 
 static void proc_ldh(cpu_context *ctx) {
     if (ctx->cur_inst->reg_1 == RT_A) {
         cpu_set_reg(ctx->cur_inst->reg_1, bus_read(0xFF00 | ctx->fetched_data));
     } else {
-        bus_write(0xFF00 | ctx->mem_dest, ctx->regs.a);
+        bus_write(ctx->mem_dest, ctx->regs.a);
     }
+
+    emu_cycles(1);
 }
 
 static void goto_addr(cpu_context *ctx, u16 addr, bool pushpc) {
@@ -325,12 +328,9 @@ static void proc_ret(cpu_context *ctx) {
     }
 
     if (check_cond(ctx)) {
-        u16 low = stack_pop();
-        emu_cycles(1);
-        u16 high = stack_pop();
-        emu_cycles(1);
+        u16 address = stack_pop16();
+        emu_cycles(2);
 
-        u16 address = low | (high<<8);
         ctx->regs.pc = address;
 
         emu_cycles(1);
@@ -344,30 +344,20 @@ static void proc_reti(cpu_context *ctx) {
 }
 
 static void proc_pop(cpu_context *ctx) {
-    u16 val_low = stack_pop();
+    u16 val = stack_pop16();
     emu_cycles(1);
-    u16 val_high = stack_pop();
-
-    u16 val = val_low | (val_high << 8);
 
     cpu_set_reg(ctx->cur_inst->reg_1, val);
-
     if (ctx->cur_inst->reg_1 == RT_AF) {
         cpu_set_reg(ctx->cur_inst->reg_1, val & 0xFFF0);
     }
 }
 
 static void proc_push(cpu_context *ctx) {
-    u16 val = cpu_read_reg(ctx->cur_inst->reg_1);
-    u16 val_high = (val >> 8) & 0x00FF;
+    u16 val = cpu_read_reg(ctx->cur_inst->reg_1);    
     emu_cycles(1);
-    stack_push(val_high);
-
-    u16 val_low = val & 0x00FF; 
-    emu_cycles(1);
-    stack_push(val_low);
-
-    emu_cycles(1);
+    stack_push16(val);
+    emu_cycles(2);
 
     return;
 }
@@ -381,20 +371,18 @@ static void proc_inc(cpu_context *ctx) {
 
     if (ctx->cur_inst->reg_1 == RT_HL && ctx->cur_inst->mode == AM_MR) {
         val = bus_read(cpu_read_reg(RT_HL)) + 1;
-        val &= 0xFF;
+        val &= 0xFF; 
         bus_write(cpu_read_reg(RT_HL), val);
     } else {
         cpu_set_reg(ctx->cur_inst->reg_1, val);
-    }
-    
-    if (!is_16bit(ctx->cur_inst->reg_1) || (ctx->cur_inst->mode == AM_MR)) {
-        u8 z = (val==0);
-        u8 h = (val & 0x0F) == 0;
-
-        cpu_set_flags(ctx, z, 0, h, -1);
+        val = cpu_read_reg(ctx->cur_inst->reg_1);
     }
 
-    return;
+    if ((ctx->cur_opcode & 0x03) == 0x03) {
+        return;
+    }
+
+    cpu_set_flags(ctx, val == 0, 0, (val & 0x0F) == 0, -1);
 }
 
 static void proc_dec(cpu_context *ctx) {
@@ -406,18 +394,18 @@ static void proc_dec(cpu_context *ctx) {
 
     if (ctx->cur_inst->reg_1 == RT_HL && ctx->cur_inst->mode == AM_MR) {
         val = bus_read(cpu_read_reg(RT_HL)) - 1;
+        val &= 0xFF;
         bus_write(cpu_read_reg(RT_HL), val);
     } else {
         cpu_set_reg(ctx->cur_inst->reg_1, val);
+        val = cpu_read_reg(ctx->cur_inst->reg_1);
     }
-    
-    if (!is_16bit(ctx->cur_inst->reg_1) || (ctx->cur_inst->mode == AM_MR)) {
-        u8 z = (val==0);
-        u8 h = (val & 0x0F) == 0x0F;
 
-        cpu_set_flags(ctx, z, 1, h, -1);
+    if ((ctx->cur_opcode & 0x0B) == 0x0B) {
+        return;
     }
-    return;
+
+    cpu_set_flags(ctx, val == 0, 1, (val & 0x0F) == 0x0F, -1);
 }
 
 static void proc_sub(cpu_context *ctx) {
@@ -459,9 +447,9 @@ static void proc_adc(cpu_context *ctx) {
 static void proc_add(cpu_context *ctx) {
     u32 val = cpu_read_reg(ctx->cur_inst->reg_1) + ctx->fetched_data;
 
-    bool is_16 = is_16bit(ctx->cur_inst->reg_1);
-    
-    if (is_16) {
+    bool is_16_bit = is_16bit(ctx->cur_inst->reg_1);
+
+    if (is_16_bit) {
         emu_cycles(1);
     }
 
@@ -470,16 +458,20 @@ static void proc_add(cpu_context *ctx) {
     }
 
     int z = (val & 0xFF) == 0;
-    int h = (cpu_read_reg(ctx->cur_inst->reg_1) & 0x0F) + (ctx->fetched_data & 0x0F) > 0x0F;
-    int c = (int)(cpu_read_reg(ctx->cur_inst->reg_1) & 0xFF) + (int)(ctx->fetched_data & 0xFF) > 0xFF;
+    int h = (cpu_read_reg(ctx->cur_inst->reg_1) & 0xF) + (ctx->fetched_data & 0xF) >= 0x10;
+    int c = (int)(cpu_read_reg(ctx->cur_inst->reg_1) & 0xFF) + (int)(ctx->fetched_data & 0xFF) >= 0x100;
 
+    if (is_16_bit) {
+        z = -1;
+        h = (cpu_read_reg(ctx->cur_inst->reg_1) & 0xFFF) + (ctx->fetched_data & 0xFFF) >= 0x1000;
+        u32 n = ((u32)cpu_read_reg(ctx->cur_inst->reg_1)) + ((u32)ctx->fetched_data);
+        c = n >= 0x10000;
+    }
 
     if (ctx->cur_inst->reg_1 == RT_SP) {
         z = 0;
-    } else if (is_16) {
-        z = -1;
-        h = (cpu_read_reg(ctx->cur_inst->reg_1) & 0xFFF) + (ctx->fetched_data & 0xFFF) > 0xFFF;
-        c = val > 0xFFFF;
+        h = (cpu_read_reg(ctx->cur_inst->reg_1) & 0xF) + (ctx->fetched_data & 0xF) >= 0x10;
+        c = (int)(cpu_read_reg(ctx->cur_inst->reg_1) & 0xFF) + (int)(ctx->fetched_data & 0xFF) >= 0x100;
     }
 
     cpu_set_reg(ctx->cur_inst->reg_1, val & 0xFFFF);
@@ -536,11 +528,11 @@ static void proc_halt(cpu_context *ctx) {
 }
 
 static void proc_ei(cpu_context *ctx) {
-    ctx->int_master_enabled = true;
+    ctx->enabling_ime = true;
 }
 
 static void proc_di(cpu_context *ctx) {
-    ctx->enabling_ime = true;
+    ctx->int_master_enabled = false;
 }
 
 

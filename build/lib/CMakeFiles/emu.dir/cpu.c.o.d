@@ -59,4 +59,6 @@ lib/CMakeFiles/emu.dir/cpu.c.o: \
  /home/shahzaibsidd/projects/gbEmulator/include/instructions.h \
  /home/shahzaibsidd/projects/gbEmulator/include/bus.h \
  /home/shahzaibsidd/projects/gbEmulator/include/emu.h \
- /home/shahzaibsidd/projects/gbEmulator/include/interrupts.h
+ /home/shahzaibsidd/projects/gbEmulator/include/interrupts.h \
+ /home/shahzaibsidd/projects/gbEmulator/include/debug.h \
+ /home/shahzaibsidd/projects/gbEmulator/include/timer.h

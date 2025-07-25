@@ -330,6 +330,30 @@ cpu_util.c.s:
 	cd /home/shahzaibsidd/projects/gbEmulator/build && $(MAKE) $(MAKESILENT) -f lib/CMakeFiles/emu.dir/build.make lib/CMakeFiles/emu.dir/cpu_util.c.s
 .PHONY : cpu_util.c.s
 
+debug.o: debug.c.o
+.PHONY : debug.o
+
+# target to build an object file
+debug.c.o:
+	cd /home/shahzaibsidd/projects/gbEmulator/build && $(MAKE) $(MAKESILENT) -f lib/CMakeFiles/emu.dir/build.make lib/CMakeFiles/emu.dir/debug.c.o
+.PHONY : debug.c.o
+
+debug.i: debug.c.i
+.PHONY : debug.i
+
+# target to preprocess a source file
+debug.c.i:
+	cd /home/shahzaibsidd/projects/gbEmulator/build && $(MAKE) $(MAKESILENT) -f lib/CMakeFiles/emu.dir/build.make lib/CMakeFiles/emu.dir/debug.c.i
+.PHONY : debug.c.i
+
+debug.s: debug.c.s
+.PHONY : debug.s
+
+# target to generate assembly for a file
+debug.c.s:
+	cd /home/shahzaibsidd/projects/gbEmulator/build && $(MAKE) $(MAKESILENT) -f lib/CMakeFiles/emu.dir/build.make lib/CMakeFiles/emu.dir/debug.c.s
+.PHONY : debug.c.s
+
 emu.o: emu.c.o
 .PHONY : emu.o
 
@@ -401,6 +425,30 @@ interrupts.s: interrupts.c.s
 interrupts.c.s:
 	cd /home/shahzaibsidd/projects/gbEmulator/build && $(MAKE) $(MAKESILENT) -f lib/CMakeFiles/emu.dir/build.make lib/CMakeFiles/emu.dir/interrupts.c.s
 .PHONY : interrupts.c.s
+
+io.o: io.c.o
+.PHONY : io.o
+
+# target to build an object file
+io.c.o:
+	cd /home/shahzaibsidd/projects/gbEmulator/build && $(MAKE) $(MAKESILENT) -f lib/CMakeFiles/emu.dir/build.make lib/CMakeFiles/emu.dir/io.c.o
+.PHONY : io.c.o
+
+io.i: io.c.i
+.PHONY : io.i
+
+# target to preprocess a source file
+io.c.i:
+	cd /home/shahzaibsidd/projects/gbEmulator/build && $(MAKE) $(MAKESILENT) -f lib/CMakeFiles/emu.dir/build.make lib/CMakeFiles/emu.dir/io.c.i
+.PHONY : io.c.i
+
+io.s: io.c.s
+.PHONY : io.s
+
+# target to generate assembly for a file
+io.c.s:
+	cd /home/shahzaibsidd/projects/gbEmulator/build && $(MAKE) $(MAKESILENT) -f lib/CMakeFiles/emu.dir/build.make lib/CMakeFiles/emu.dir/io.c.s
+.PHONY : io.c.s
 
 ppu.o: ppu.c.o
 .PHONY : ppu.o
@@ -498,6 +546,30 @@ timer.c.s:
 	cd /home/shahzaibsidd/projects/gbEmulator/build && $(MAKE) $(MAKESILENT) -f lib/CMakeFiles/emu.dir/build.make lib/CMakeFiles/emu.dir/timer.c.s
 .PHONY : timer.c.s
 
+ui.o: ui.c.o
+.PHONY : ui.o
+
+# target to build an object file
+ui.c.o:
+	cd /home/shahzaibsidd/projects/gbEmulator/build && $(MAKE) $(MAKESILENT) -f lib/CMakeFiles/emu.dir/build.make lib/CMakeFiles/emu.dir/ui.c.o
+.PHONY : ui.c.o
+
+ui.i: ui.c.i
+.PHONY : ui.i
+
+# target to preprocess a source file
+ui.c.i:
+	cd /home/shahzaibsidd/projects/gbEmulator/build && $(MAKE) $(MAKESILENT) -f lib/CMakeFiles/emu.dir/build.make lib/CMakeFiles/emu.dir/ui.c.i
+.PHONY : ui.c.i
+
+ui.s: ui.c.s
+.PHONY : ui.s
+
+# target to generate assembly for a file
+ui.c.s:
+	cd /home/shahzaibsidd/projects/gbEmulator/build && $(MAKE) $(MAKESILENT) -f lib/CMakeFiles/emu.dir/build.make lib/CMakeFiles/emu.dir/ui.c.s
+.PHONY : ui.c.s
+
 # Help Target
 help:
 	@echo "The following are some of the valid targets for this Makefile:"
@@ -530,6 +602,9 @@ help:
 	@echo "... cpu_util.o"
 	@echo "... cpu_util.i"
 	@echo "... cpu_util.s"
+	@echo "... debug.o"
+	@echo "... debug.i"
+	@echo "... debug.s"
 	@echo "... emu.o"
 	@echo "... emu.i"
 	@echo "... emu.s"
@@ -539,6 +614,9 @@ help:
 	@echo "... interrupts.o"
 	@echo "... interrupts.i"
 	@echo "... interrupts.s"
+	@echo "... io.o"
+	@echo "... io.i"
+	@echo "... io.s"
 	@echo "... ppu.o"
 	@echo "... ppu.i"
 	@echo "... ppu.s"
@@ -551,6 +629,9 @@ help:
 	@echo "... timer.o"
 	@echo "... timer.i"
 	@echo "... timer.s"
+	@echo "... ui.o"
+	@echo "... ui.i"
+	@echo "... ui.s"
 .PHONY : help
 
 

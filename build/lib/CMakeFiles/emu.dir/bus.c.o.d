@@ -59,4 +59,5 @@ lib/CMakeFiles/emu.dir/bus.c.o: \
  /home/shahzaibsidd/projects/gbEmulator/include/cart.h \
  /home/shahzaibsidd/projects/gbEmulator/include/ram.h \
  /home/shahzaibsidd/projects/gbEmulator/include/cpu.h \
- /home/shahzaibsidd/projects/gbEmulator/include/instructions.h
+ /home/shahzaibsidd/projects/gbEmulator/include/instructions.h \
+ /home/shahzaibsidd/projects/gbEmulator/include/io.h

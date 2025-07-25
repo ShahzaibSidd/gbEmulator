@@ -14,13 +14,16 @@ set(CMAKE_DEPENDS_DEPENDENCY_FILES
   "/home/shahzaibsidd/projects/gbEmulator/lib/cpu_fetch.c" "lib/CMakeFiles/emu.dir/cpu_fetch.c.o" "gcc" "lib/CMakeFiles/emu.dir/cpu_fetch.c.o.d"
   "/home/shahzaibsidd/projects/gbEmulator/lib/cpu_proc.c" "lib/CMakeFiles/emu.dir/cpu_proc.c.o" "gcc" "lib/CMakeFiles/emu.dir/cpu_proc.c.o.d"
   "/home/shahzaibsidd/projects/gbEmulator/lib/cpu_util.c" "lib/CMakeFiles/emu.dir/cpu_util.c.o" "gcc" "lib/CMakeFiles/emu.dir/cpu_util.c.o.d"
+  "/home/shahzaibsidd/projects/gbEmulator/lib/debug.c" "lib/CMakeFiles/emu.dir/debug.c.o" "gcc" "lib/CMakeFiles/emu.dir/debug.c.o.d"
   "/home/shahzaibsidd/projects/gbEmulator/lib/emu.c" "lib/CMakeFiles/emu.dir/emu.c.o" "gcc" "lib/CMakeFiles/emu.dir/emu.c.o.d"
   "/home/shahzaibsidd/projects/gbEmulator/lib/instructions.c" "lib/CMakeFiles/emu.dir/instructions.c.o" "gcc" "lib/CMakeFiles/emu.dir/instructions.c.o.d"
   "/home/shahzaibsidd/projects/gbEmulator/lib/interrupts.c" "lib/CMakeFiles/emu.dir/interrupts.c.o" "gcc" "lib/CMakeFiles/emu.dir/interrupts.c.o.d"
+  "/home/shahzaibsidd/projects/gbEmulator/lib/io.c" "lib/CMakeFiles/emu.dir/io.c.o" "gcc" "lib/CMakeFiles/emu.dir/io.c.o.d"
   "/home/shahzaibsidd/projects/gbEmulator/lib/ppu.c" "lib/CMakeFiles/emu.dir/ppu.c.o" "gcc" "lib/CMakeFiles/emu.dir/ppu.c.o.d"
   "/home/shahzaibsidd/projects/gbEmulator/lib/ram.c" "lib/CMakeFiles/emu.dir/ram.c.o" "gcc" "lib/CMakeFiles/emu.dir/ram.c.o.d"
   "/home/shahzaibsidd/projects/gbEmulator/lib/stack.c" "lib/CMakeFiles/emu.dir/stack.c.o" "gcc" "lib/CMakeFiles/emu.dir/stack.c.o.d"
   "/home/shahzaibsidd/projects/gbEmulator/lib/timer.c" "lib/CMakeFiles/emu.dir/timer.c.o" "gcc" "lib/CMakeFiles/emu.dir/timer.c.o.d"
+  "/home/shahzaibsidd/projects/gbEmulator/lib/ui.c" "lib/CMakeFiles/emu.dir/ui.c.o" "gcc" "lib/CMakeFiles/emu.dir/ui.c.o.d"
   )
 
 # Targets to which this target links which contain Fortran sources.

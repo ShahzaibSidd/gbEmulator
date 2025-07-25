@@ -20,7 +20,7 @@ bool int_check(cpu_context *ctx, u16 address, interrupt_type it) {
     return false;
 }
 
-void cpu_handle_intterupt(cpu_context *ctx) {
+void cpu_handle_interrupt(cpu_context *ctx) {
     if (int_check(ctx, 0x0040, IT_VBLANK)) {
         return;
     } else if (int_check(ctx, 0x0048, IT_LCD_STAT)) {

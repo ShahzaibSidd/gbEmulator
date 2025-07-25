@@ -2,6 +2,7 @@
 #include <cart.h>
 #include <ram.h>
 #include <cpu.h>
+#include <io.h>
 
 // 0x0000 - 0x3FFF : ROM Bank 0
 // 0x4000 - 0x7FFF : ROM Bank 1 - Switchable    
@@ -24,7 +25,8 @@ u8 bus_read(u16 address) {
         //Map and Character Data
         //TODO
         printf("NOT SUPPORTED: bus_read(%04X)\n", address);
-        NOT_IMPL
+        //NOT_IMPL
+        return 0;
     } else if (address < 0xC000) {
         //Cartridge RAM
         return cart_read(address);  
@@ -45,10 +47,7 @@ u8 bus_read(u16 address) {
         return 0;
     } else if (address < 0xFF80) {
         //I/O Registers
-        //TODO
-        printf("NOT SUPPORTED: bus_read(%04X)\n", address);
-        //NOT_IMPL
-        return 0;
+        return io_read(address);
     } else if (address == 0xFFFF) {
         //Interrupt enable register
         return cpu_get_ie_register();
@@ -60,8 +59,8 @@ u8 bus_read(u16 address) {
 };
 
 u16 bus_read16(u16 address) {
-    u16 high = bus_read(address);
-    u16 low = bus_read(address+1);
+    u16 high = bus_read(address+1);
+    u16 low = bus_read(address);
 
     return (low | (high << 8));
 }
@@ -91,9 +90,7 @@ void bus_write(u16 address, u8 value) {
         //Reserved (not gonna use)
     } else if (address < 0xFF80) {
         //I/O REGISTERS
-        //TODO
-        printf("NOT SUPPORTED: bus_write(%04X)\n", address);
-        //NOT_IMPL
+        io_write(address, value);
     } else if (address == 0xFFFF) {
         //Interrupt enable register
         //TODO
@@ -106,9 +103,9 @@ void bus_write(u16 address, u8 value) {
 }; 
 
 void bus_write16(u16 address, u16 value) {
-    u8 high = (value >> 8) & 0xFF;
-    u8 low = value & 0xFF;
-    bus_write(address+1, high);
+    u16 high = (value >> 8) & 0xFF;
+    u16 low = value & 0xFF;
+    bus_write(address + 1, high);
     bus_write(address, low);
 
     return;
