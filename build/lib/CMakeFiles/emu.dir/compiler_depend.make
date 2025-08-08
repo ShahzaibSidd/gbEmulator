@@ -6,8 +6,10 @@ lib/CMakeFiles/emu.dir/bus.c.o: /home/shahzaibsidd/projects/gbEmulator/lib/bus.c
   /home/shahzaibsidd/projects/gbEmulator/include/cart.h \
   /home/shahzaibsidd/projects/gbEmulator/include/common.h \
   /home/shahzaibsidd/projects/gbEmulator/include/cpu.h \
+  /home/shahzaibsidd/projects/gbEmulator/include/dma.h \
   /home/shahzaibsidd/projects/gbEmulator/include/instructions.h \
   /home/shahzaibsidd/projects/gbEmulator/include/io.h \
+  /home/shahzaibsidd/projects/gbEmulator/include/ppu.h \
   /home/shahzaibsidd/projects/gbEmulator/include/ram.h \
   /usr/include/alloca.h \
   /usr/include/endian.h \
@@ -472,12 +474,80 @@ lib/CMakeFiles/emu.dir/debug.c.o: /home/shahzaibsidd/projects/gbEmulator/lib/deb
   /usr/lib/gcc/x86_64-linux-gnu/13/include/stddef.h \
   /usr/lib/gcc/x86_64-linux-gnu/13/include/stdint.h
 
+lib/CMakeFiles/emu.dir/dma.c.o: /home/shahzaibsidd/projects/gbEmulator/lib/dma.c \
+  /home/shahzaibsidd/projects/gbEmulator/include/bus.h \
+  /home/shahzaibsidd/projects/gbEmulator/include/common.h \
+  /home/shahzaibsidd/projects/gbEmulator/include/dma.h \
+  /home/shahzaibsidd/projects/gbEmulator/include/ppu.h \
+  /usr/include/alloca.h \
+  /usr/include/endian.h \
+  /usr/include/features-time64.h \
+  /usr/include/features.h \
+  /usr/include/stdc-predef.h \
+  /usr/include/stdint.h \
+  /usr/include/stdio.h \
+  /usr/include/stdlib.h \
+  /usr/include/x86_64-linux-gnu/bits/atomic_wide_counter.h \
+  /usr/include/x86_64-linux-gnu/bits/byteswap.h \
+  /usr/include/x86_64-linux-gnu/bits/endian.h \
+  /usr/include/x86_64-linux-gnu/bits/endianness.h \
+  /usr/include/x86_64-linux-gnu/bits/floatn-common.h \
+  /usr/include/x86_64-linux-gnu/bits/floatn.h \
+  /usr/include/x86_64-linux-gnu/bits/libc-header-start.h \
+  /usr/include/x86_64-linux-gnu/bits/long-double.h \
+  /usr/include/x86_64-linux-gnu/bits/pthreadtypes-arch.h \
+  /usr/include/x86_64-linux-gnu/bits/pthreadtypes.h \
+  /usr/include/x86_64-linux-gnu/bits/select.h \
+  /usr/include/x86_64-linux-gnu/bits/stdint-intn.h \
+  /usr/include/x86_64-linux-gnu/bits/stdint-least.h \
+  /usr/include/x86_64-linux-gnu/bits/stdint-uintn.h \
+  /usr/include/x86_64-linux-gnu/bits/stdio_lim.h \
+  /usr/include/x86_64-linux-gnu/bits/stdlib-float.h \
+  /usr/include/x86_64-linux-gnu/bits/struct_mutex.h \
+  /usr/include/x86_64-linux-gnu/bits/struct_rwlock.h \
+  /usr/include/x86_64-linux-gnu/bits/thread-shared-types.h \
+  /usr/include/x86_64-linux-gnu/bits/time64.h \
+  /usr/include/x86_64-linux-gnu/bits/timesize.h \
+  /usr/include/x86_64-linux-gnu/bits/types.h \
+  /usr/include/x86_64-linux-gnu/bits/types/FILE.h \
+  /usr/include/x86_64-linux-gnu/bits/types/__FILE.h \
+  /usr/include/x86_64-linux-gnu/bits/types/__fpos64_t.h \
+  /usr/include/x86_64-linux-gnu/bits/types/__fpos_t.h \
+  /usr/include/x86_64-linux-gnu/bits/types/__mbstate_t.h \
+  /usr/include/x86_64-linux-gnu/bits/types/__sigset_t.h \
+  /usr/include/x86_64-linux-gnu/bits/types/clock_t.h \
+  /usr/include/x86_64-linux-gnu/bits/types/clockid_t.h \
+  /usr/include/x86_64-linux-gnu/bits/types/cookie_io_functions_t.h \
+  /usr/include/x86_64-linux-gnu/bits/types/sigset_t.h \
+  /usr/include/x86_64-linux-gnu/bits/types/struct_FILE.h \
+  /usr/include/x86_64-linux-gnu/bits/types/struct_timespec.h \
+  /usr/include/x86_64-linux-gnu/bits/types/struct_timeval.h \
+  /usr/include/x86_64-linux-gnu/bits/types/time_t.h \
+  /usr/include/x86_64-linux-gnu/bits/types/timer_t.h \
+  /usr/include/x86_64-linux-gnu/bits/typesizes.h \
+  /usr/include/x86_64-linux-gnu/bits/uintn-identity.h \
+  /usr/include/x86_64-linux-gnu/bits/waitflags.h \
+  /usr/include/x86_64-linux-gnu/bits/waitstatus.h \
+  /usr/include/x86_64-linux-gnu/bits/wchar.h \
+  /usr/include/x86_64-linux-gnu/bits/wordsize.h \
+  /usr/include/x86_64-linux-gnu/gnu/stubs-64.h \
+  /usr/include/x86_64-linux-gnu/gnu/stubs.h \
+  /usr/include/x86_64-linux-gnu/sys/cdefs.h \
+  /usr/include/x86_64-linux-gnu/sys/select.h \
+  /usr/include/x86_64-linux-gnu/sys/types.h \
+  /usr/lib/gcc/x86_64-linux-gnu/13/include/stdarg.h \
+  /usr/lib/gcc/x86_64-linux-gnu/13/include/stdbool.h \
+  /usr/lib/gcc/x86_64-linux-gnu/13/include/stddef.h \
+  /usr/lib/gcc/x86_64-linux-gnu/13/include/stdint.h
+
 lib/CMakeFiles/emu.dir/emu.c.o: /home/shahzaibsidd/projects/gbEmulator/lib/emu.c \
   /home/shahzaibsidd/projects/gbEmulator/include/cart.h \
   /home/shahzaibsidd/projects/gbEmulator/include/common.h \
   /home/shahzaibsidd/projects/gbEmulator/include/cpu.h \
+  /home/shahzaibsidd/projects/gbEmulator/include/dma.h \
   /home/shahzaibsidd/projects/gbEmulator/include/emu.h \
   /home/shahzaibsidd/projects/gbEmulator/include/instructions.h \
+  /home/shahzaibsidd/projects/gbEmulator/include/ppu.h \
   /home/shahzaibsidd/projects/gbEmulator/include/timer.h \
   /home/shahzaibsidd/projects/gbEmulator/include/ui.h \
   /usr/include/alloca.h \
@@ -699,9 +769,77 @@ lib/CMakeFiles/emu.dir/interrupts.c.o: /home/shahzaibsidd/projects/gbEmulator/li
 lib/CMakeFiles/emu.dir/io.c.o: /home/shahzaibsidd/projects/gbEmulator/lib/io.c \
   /home/shahzaibsidd/projects/gbEmulator/include/common.h \
   /home/shahzaibsidd/projects/gbEmulator/include/cpu.h \
+  /home/shahzaibsidd/projects/gbEmulator/include/dma.h \
   /home/shahzaibsidd/projects/gbEmulator/include/instructions.h \
   /home/shahzaibsidd/projects/gbEmulator/include/io.h \
+  /home/shahzaibsidd/projects/gbEmulator/include/lcd.h \
   /home/shahzaibsidd/projects/gbEmulator/include/timer.h \
+  /usr/include/alloca.h \
+  /usr/include/endian.h \
+  /usr/include/features-time64.h \
+  /usr/include/features.h \
+  /usr/include/stdc-predef.h \
+  /usr/include/stdint.h \
+  /usr/include/stdio.h \
+  /usr/include/stdlib.h \
+  /usr/include/x86_64-linux-gnu/bits/atomic_wide_counter.h \
+  /usr/include/x86_64-linux-gnu/bits/byteswap.h \
+  /usr/include/x86_64-linux-gnu/bits/endian.h \
+  /usr/include/x86_64-linux-gnu/bits/endianness.h \
+  /usr/include/x86_64-linux-gnu/bits/floatn-common.h \
+  /usr/include/x86_64-linux-gnu/bits/floatn.h \
+  /usr/include/x86_64-linux-gnu/bits/libc-header-start.h \
+  /usr/include/x86_64-linux-gnu/bits/long-double.h \
+  /usr/include/x86_64-linux-gnu/bits/pthreadtypes-arch.h \
+  /usr/include/x86_64-linux-gnu/bits/pthreadtypes.h \
+  /usr/include/x86_64-linux-gnu/bits/select.h \
+  /usr/include/x86_64-linux-gnu/bits/stdint-intn.h \
+  /usr/include/x86_64-linux-gnu/bits/stdint-least.h \
+  /usr/include/x86_64-linux-gnu/bits/stdint-uintn.h \
+  /usr/include/x86_64-linux-gnu/bits/stdio_lim.h \
+  /usr/include/x86_64-linux-gnu/bits/stdlib-float.h \
+  /usr/include/x86_64-linux-gnu/bits/struct_mutex.h \
+  /usr/include/x86_64-linux-gnu/bits/struct_rwlock.h \
+  /usr/include/x86_64-linux-gnu/bits/thread-shared-types.h \
+  /usr/include/x86_64-linux-gnu/bits/time64.h \
+  /usr/include/x86_64-linux-gnu/bits/timesize.h \
+  /usr/include/x86_64-linux-gnu/bits/types.h \
+  /usr/include/x86_64-linux-gnu/bits/types/FILE.h \
+  /usr/include/x86_64-linux-gnu/bits/types/__FILE.h \
+  /usr/include/x86_64-linux-gnu/bits/types/__fpos64_t.h \
+  /usr/include/x86_64-linux-gnu/bits/types/__fpos_t.h \
+  /usr/include/x86_64-linux-gnu/bits/types/__mbstate_t.h \
+  /usr/include/x86_64-linux-gnu/bits/types/__sigset_t.h \
+  /usr/include/x86_64-linux-gnu/bits/types/clock_t.h \
+  /usr/include/x86_64-linux-gnu/bits/types/clockid_t.h \
+  /usr/include/x86_64-linux-gnu/bits/types/cookie_io_functions_t.h \
+  /usr/include/x86_64-linux-gnu/bits/types/sigset_t.h \
+  /usr/include/x86_64-linux-gnu/bits/types/struct_FILE.h \
+  /usr/include/x86_64-linux-gnu/bits/types/struct_timespec.h \
+  /usr/include/x86_64-linux-gnu/bits/types/struct_timeval.h \
+  /usr/include/x86_64-linux-gnu/bits/types/time_t.h \
+  /usr/include/x86_64-linux-gnu/bits/types/timer_t.h \
+  /usr/include/x86_64-linux-gnu/bits/typesizes.h \
+  /usr/include/x86_64-linux-gnu/bits/uintn-identity.h \
+  /usr/include/x86_64-linux-gnu/bits/waitflags.h \
+  /usr/include/x86_64-linux-gnu/bits/waitstatus.h \
+  /usr/include/x86_64-linux-gnu/bits/wchar.h \
+  /usr/include/x86_64-linux-gnu/bits/wordsize.h \
+  /usr/include/x86_64-linux-gnu/gnu/stubs-64.h \
+  /usr/include/x86_64-linux-gnu/gnu/stubs.h \
+  /usr/include/x86_64-linux-gnu/sys/cdefs.h \
+  /usr/include/x86_64-linux-gnu/sys/select.h \
+  /usr/include/x86_64-linux-gnu/sys/types.h \
+  /usr/lib/gcc/x86_64-linux-gnu/13/include/stdarg.h \
+  /usr/lib/gcc/x86_64-linux-gnu/13/include/stdbool.h \
+  /usr/lib/gcc/x86_64-linux-gnu/13/include/stddef.h \
+  /usr/lib/gcc/x86_64-linux-gnu/13/include/stdint.h
+
+lib/CMakeFiles/emu.dir/lcd.c.o: /home/shahzaibsidd/projects/gbEmulator/lib/lcd.c \
+  /home/shahzaibsidd/projects/gbEmulator/include/common.h \
+  /home/shahzaibsidd/projects/gbEmulator/include/dma.h \
+  /home/shahzaibsidd/projects/gbEmulator/include/lcd.h \
+  /home/shahzaibsidd/projects/gbEmulator/include/ppu.h \
   /usr/include/alloca.h \
   /usr/include/endian.h \
   /usr/include/features-time64.h \
@@ -765,6 +903,146 @@ lib/CMakeFiles/emu.dir/io.c.o: /home/shahzaibsidd/projects/gbEmulator/lib/io.c \
 
 lib/CMakeFiles/emu.dir/ppu.c.o: /home/shahzaibsidd/projects/gbEmulator/lib/ppu.c \
   /home/shahzaibsidd/projects/gbEmulator/include/common.h \
+  /home/shahzaibsidd/projects/gbEmulator/include/lcd.h \
+  /home/shahzaibsidd/projects/gbEmulator/include/ppu.h \
+  /home/shahzaibsidd/projects/gbEmulator/include/ppu_sm.h \
+  /usr/include/alloca.h \
+  /usr/include/endian.h \
+  /usr/include/features-time64.h \
+  /usr/include/features.h \
+  /usr/include/stdc-predef.h \
+  /usr/include/stdint.h \
+  /usr/include/stdio.h \
+  /usr/include/stdlib.h \
+  /usr/include/string.h \
+  /usr/include/strings.h \
+  /usr/include/x86_64-linux-gnu/bits/atomic_wide_counter.h \
+  /usr/include/x86_64-linux-gnu/bits/byteswap.h \
+  /usr/include/x86_64-linux-gnu/bits/endian.h \
+  /usr/include/x86_64-linux-gnu/bits/endianness.h \
+  /usr/include/x86_64-linux-gnu/bits/floatn-common.h \
+  /usr/include/x86_64-linux-gnu/bits/floatn.h \
+  /usr/include/x86_64-linux-gnu/bits/libc-header-start.h \
+  /usr/include/x86_64-linux-gnu/bits/long-double.h \
+  /usr/include/x86_64-linux-gnu/bits/pthreadtypes-arch.h \
+  /usr/include/x86_64-linux-gnu/bits/pthreadtypes.h \
+  /usr/include/x86_64-linux-gnu/bits/select.h \
+  /usr/include/x86_64-linux-gnu/bits/stdint-intn.h \
+  /usr/include/x86_64-linux-gnu/bits/stdint-least.h \
+  /usr/include/x86_64-linux-gnu/bits/stdint-uintn.h \
+  /usr/include/x86_64-linux-gnu/bits/stdio_lim.h \
+  /usr/include/x86_64-linux-gnu/bits/stdlib-float.h \
+  /usr/include/x86_64-linux-gnu/bits/struct_mutex.h \
+  /usr/include/x86_64-linux-gnu/bits/struct_rwlock.h \
+  /usr/include/x86_64-linux-gnu/bits/thread-shared-types.h \
+  /usr/include/x86_64-linux-gnu/bits/time64.h \
+  /usr/include/x86_64-linux-gnu/bits/timesize.h \
+  /usr/include/x86_64-linux-gnu/bits/types.h \
+  /usr/include/x86_64-linux-gnu/bits/types/FILE.h \
+  /usr/include/x86_64-linux-gnu/bits/types/__FILE.h \
+  /usr/include/x86_64-linux-gnu/bits/types/__fpos64_t.h \
+  /usr/include/x86_64-linux-gnu/bits/types/__fpos_t.h \
+  /usr/include/x86_64-linux-gnu/bits/types/__locale_t.h \
+  /usr/include/x86_64-linux-gnu/bits/types/__mbstate_t.h \
+  /usr/include/x86_64-linux-gnu/bits/types/__sigset_t.h \
+  /usr/include/x86_64-linux-gnu/bits/types/clock_t.h \
+  /usr/include/x86_64-linux-gnu/bits/types/clockid_t.h \
+  /usr/include/x86_64-linux-gnu/bits/types/cookie_io_functions_t.h \
+  /usr/include/x86_64-linux-gnu/bits/types/locale_t.h \
+  /usr/include/x86_64-linux-gnu/bits/types/sigset_t.h \
+  /usr/include/x86_64-linux-gnu/bits/types/struct_FILE.h \
+  /usr/include/x86_64-linux-gnu/bits/types/struct_timespec.h \
+  /usr/include/x86_64-linux-gnu/bits/types/struct_timeval.h \
+  /usr/include/x86_64-linux-gnu/bits/types/time_t.h \
+  /usr/include/x86_64-linux-gnu/bits/types/timer_t.h \
+  /usr/include/x86_64-linux-gnu/bits/typesizes.h \
+  /usr/include/x86_64-linux-gnu/bits/uintn-identity.h \
+  /usr/include/x86_64-linux-gnu/bits/waitflags.h \
+  /usr/include/x86_64-linux-gnu/bits/waitstatus.h \
+  /usr/include/x86_64-linux-gnu/bits/wchar.h \
+  /usr/include/x86_64-linux-gnu/bits/wordsize.h \
+  /usr/include/x86_64-linux-gnu/gnu/stubs-64.h \
+  /usr/include/x86_64-linux-gnu/gnu/stubs.h \
+  /usr/include/x86_64-linux-gnu/sys/cdefs.h \
+  /usr/include/x86_64-linux-gnu/sys/select.h \
+  /usr/include/x86_64-linux-gnu/sys/types.h \
+  /usr/lib/gcc/x86_64-linux-gnu/13/include/stdarg.h \
+  /usr/lib/gcc/x86_64-linux-gnu/13/include/stdbool.h \
+  /usr/lib/gcc/x86_64-linux-gnu/13/include/stddef.h \
+  /usr/lib/gcc/x86_64-linux-gnu/13/include/stdint.h
+
+lib/CMakeFiles/emu.dir/ppu_pipeline.c.o: /home/shahzaibsidd/projects/gbEmulator/lib/ppu_pipeline.c \
+  /home/shahzaibsidd/projects/gbEmulator/include/bus.h \
+  /home/shahzaibsidd/projects/gbEmulator/include/common.h \
+  /home/shahzaibsidd/projects/gbEmulator/include/lcd.h \
+  /home/shahzaibsidd/projects/gbEmulator/include/ppu.h \
+  /usr/include/alloca.h \
+  /usr/include/endian.h \
+  /usr/include/features-time64.h \
+  /usr/include/features.h \
+  /usr/include/stdc-predef.h \
+  /usr/include/stdint.h \
+  /usr/include/stdio.h \
+  /usr/include/stdlib.h \
+  /usr/include/x86_64-linux-gnu/bits/atomic_wide_counter.h \
+  /usr/include/x86_64-linux-gnu/bits/byteswap.h \
+  /usr/include/x86_64-linux-gnu/bits/endian.h \
+  /usr/include/x86_64-linux-gnu/bits/endianness.h \
+  /usr/include/x86_64-linux-gnu/bits/floatn-common.h \
+  /usr/include/x86_64-linux-gnu/bits/floatn.h \
+  /usr/include/x86_64-linux-gnu/bits/libc-header-start.h \
+  /usr/include/x86_64-linux-gnu/bits/long-double.h \
+  /usr/include/x86_64-linux-gnu/bits/pthreadtypes-arch.h \
+  /usr/include/x86_64-linux-gnu/bits/pthreadtypes.h \
+  /usr/include/x86_64-linux-gnu/bits/select.h \
+  /usr/include/x86_64-linux-gnu/bits/stdint-intn.h \
+  /usr/include/x86_64-linux-gnu/bits/stdint-least.h \
+  /usr/include/x86_64-linux-gnu/bits/stdint-uintn.h \
+  /usr/include/x86_64-linux-gnu/bits/stdio_lim.h \
+  /usr/include/x86_64-linux-gnu/bits/stdlib-float.h \
+  /usr/include/x86_64-linux-gnu/bits/struct_mutex.h \
+  /usr/include/x86_64-linux-gnu/bits/struct_rwlock.h \
+  /usr/include/x86_64-linux-gnu/bits/thread-shared-types.h \
+  /usr/include/x86_64-linux-gnu/bits/time64.h \
+  /usr/include/x86_64-linux-gnu/bits/timesize.h \
+  /usr/include/x86_64-linux-gnu/bits/types.h \
+  /usr/include/x86_64-linux-gnu/bits/types/FILE.h \
+  /usr/include/x86_64-linux-gnu/bits/types/__FILE.h \
+  /usr/include/x86_64-linux-gnu/bits/types/__fpos64_t.h \
+  /usr/include/x86_64-linux-gnu/bits/types/__fpos_t.h \
+  /usr/include/x86_64-linux-gnu/bits/types/__mbstate_t.h \
+  /usr/include/x86_64-linux-gnu/bits/types/__sigset_t.h \
+  /usr/include/x86_64-linux-gnu/bits/types/clock_t.h \
+  /usr/include/x86_64-linux-gnu/bits/types/clockid_t.h \
+  /usr/include/x86_64-linux-gnu/bits/types/cookie_io_functions_t.h \
+  /usr/include/x86_64-linux-gnu/bits/types/sigset_t.h \
+  /usr/include/x86_64-linux-gnu/bits/types/struct_FILE.h \
+  /usr/include/x86_64-linux-gnu/bits/types/struct_timespec.h \
+  /usr/include/x86_64-linux-gnu/bits/types/struct_timeval.h \
+  /usr/include/x86_64-linux-gnu/bits/types/time_t.h \
+  /usr/include/x86_64-linux-gnu/bits/types/timer_t.h \
+  /usr/include/x86_64-linux-gnu/bits/typesizes.h \
+  /usr/include/x86_64-linux-gnu/bits/uintn-identity.h \
+  /usr/include/x86_64-linux-gnu/bits/waitflags.h \
+  /usr/include/x86_64-linux-gnu/bits/waitstatus.h \
+  /usr/include/x86_64-linux-gnu/bits/wchar.h \
+  /usr/include/x86_64-linux-gnu/bits/wordsize.h \
+  /usr/include/x86_64-linux-gnu/gnu/stubs-64.h \
+  /usr/include/x86_64-linux-gnu/gnu/stubs.h \
+  /usr/include/x86_64-linux-gnu/sys/cdefs.h \
+  /usr/include/x86_64-linux-gnu/sys/select.h \
+  /usr/include/x86_64-linux-gnu/sys/types.h \
+  /usr/lib/gcc/x86_64-linux-gnu/13/include/stdarg.h \
+  /usr/lib/gcc/x86_64-linux-gnu/13/include/stdbool.h \
+  /usr/lib/gcc/x86_64-linux-gnu/13/include/stddef.h \
+  /usr/lib/gcc/x86_64-linux-gnu/13/include/stdint.h
+
+lib/CMakeFiles/emu.dir/ppu_sm.c.o: /home/shahzaibsidd/projects/gbEmulator/lib/ppu_sm.c \
+  /home/shahzaibsidd/projects/gbEmulator/include/common.h \
+  /home/shahzaibsidd/projects/gbEmulator/include/cpu.h \
+  /home/shahzaibsidd/projects/gbEmulator/include/instructions.h \
+  /home/shahzaibsidd/projects/gbEmulator/include/interrupts.h \
+  /home/shahzaibsidd/projects/gbEmulator/include/lcd.h \
   /home/shahzaibsidd/projects/gbEmulator/include/ppu.h \
   /usr/include/alloca.h \
   /usr/include/endian.h \
@@ -1026,8 +1304,10 @@ lib/CMakeFiles/emu.dir/timer.c.o: /home/shahzaibsidd/projects/gbEmulator/lib/tim
   /usr/lib/gcc/x86_64-linux-gnu/13/include/stdint.h
 
 lib/CMakeFiles/emu.dir/ui.c.o: /home/shahzaibsidd/projects/gbEmulator/lib/ui.c \
+  /home/shahzaibsidd/projects/gbEmulator/include/bus.h \
   /home/shahzaibsidd/projects/gbEmulator/include/common.h \
   /home/shahzaibsidd/projects/gbEmulator/include/emu.h \
+  /home/shahzaibsidd/projects/gbEmulator/include/ppu.h \
   /home/shahzaibsidd/projects/gbEmulator/include/ui.h \
   /usr/include/SDL2/SDL.h \
   /usr/include/SDL2/SDL_assert.h \
@@ -1277,7 +1557,13 @@ lib/CMakeFiles/emu.dir/ui.c.o: /home/shahzaibsidd/projects/gbEmulator/lib/ui.c \
 
 /usr/lib/gcc/x86_64-linux-gnu/13/include/tbmintrin.h:
 
-/usr/include/SDL2/SDL_error.h:
+/usr/lib/gcc/x86_64-linux-gnu/13/include/sgxintrin.h:
+
+/usr/lib/gcc/x86_64-linux-gnu/13/include/rtmintrin.h:
+
+/usr/lib/gcc/x86_64-linux-gnu/13/include/raointintrin.h:
+
+/usr/lib/gcc/x86_64-linux-gnu/13/include/prfchwintrin.h:
 
 /usr/include/SDL2/SDL_blendmode.h:
 
@@ -1293,6 +1579,12 @@ lib/CMakeFiles/emu.dir/ui.c.o: /home/shahzaibsidd/projects/gbEmulator/lib/ui.c \
 
 /usr/lib/gcc/x86_64-linux-gnu/13/include/avx512pfintrin.h:
 
+/usr/include/strings.h:
+
+/usr/include/x86_64-linux-gnu/bits/struct_rwlock.h:
+
+/home/shahzaibsidd/projects/gbEmulator/include/lcd.h:
+
 /home/shahzaibsidd/projects/gbEmulator/lib/interrupts.c:
 
 /usr/lib/gcc/x86_64-linux-gnu/13/include/gfniintrin.h:
@@ -1307,8 +1599,6 @@ lib/CMakeFiles/emu.dir/ui.c.o: /home/shahzaibsidd/projects/gbEmulator/lib/ui.c \
 
 /home/shahzaibsidd/projects/gbEmulator/lib/stack.c:
 
-/home/shahzaibsidd/projects/gbEmulator/lib/emu.c:
-
 /usr/include/x86_64-linux-gnu/bits/types/locale_t.h:
 
 /usr/include/x86_64-linux-gnu/bits/types/__fpos64_t.h:
@@ -1321,9 +1611,11 @@ lib/CMakeFiles/emu.dir/ui.c.o: /home/shahzaibsidd/projects/gbEmulator/lib/ui.c \
 
 /usr/lib/gcc/x86_64-linux-gnu/13/include/mm_malloc.h:
 
-/usr/include/SDL2/SDL_events.h:
-
 /usr/include/x86_64-linux-gnu/bits/posix_opt.h:
+
+/home/shahzaibsidd/projects/gbEmulator/lib/emu.c:
+
+/home/shahzaibsidd/projects/gbEmulator/lib/ppu_sm.c:
 
 /usr/include/x86_64-linux-gnu/bits/confname.h:
 
@@ -1337,19 +1629,11 @@ lib/CMakeFiles/emu.dir/ui.c.o: /home/shahzaibsidd/projects/gbEmulator/lib/ui.c \
 
 /usr/lib/gcc/x86_64-linux-gnu/13/include/avx512vbmi2intrin.h:
 
-/usr/include/x86_64-linux-gnu/bits/cpu-set.h:
-
-/home/shahzaibsidd/projects/gbEmulator/lib/cpu_fetch.c:
-
 /home/shahzaibsidd/projects/gbEmulator/include/interrupts.h:
 
 /usr/include/SDL2/SDL_atomic.h:
 
 /home/shahzaibsidd/projects/gbEmulator/include/emu.h:
-
-/usr/lib/gcc/x86_64-linux-gnu/13/include/fmaintrin.h:
-
-/usr/include/unistd.h:
 
 /usr/include/x86_64-linux-gnu/sys/select.h:
 
@@ -1383,17 +1667,13 @@ lib/CMakeFiles/emu.dir/ui.c.o: /home/shahzaibsidd/projects/gbEmulator/lib/ui.c \
 
 /usr/include/x86_64-linux-gnu/gnu/stubs-64.h:
 
-/home/shahzaibsidd/projects/gbEmulator/include/ppu.h:
+/usr/include/x86_64-linux-gnu/bits/wordsize.h:
 
-/usr/include/x86_64-linux-gnu/bits/stdint-least.h:
+/home/shahzaibsidd/projects/gbEmulator/include/ram.h:
 
-/usr/include/x86_64-linux-gnu/bits/types/mbstate_t.h:
+/usr/include/x86_64-linux-gnu/bits/wchar.h:
 
-/usr/include/x86_64-linux-gnu/bits/stdint-intn.h:
-
-/usr/lib/gcc/x86_64-linux-gnu/13/include/fxsrintrin.h:
-
-/usr/lib/gcc/x86_64-linux-gnu/13/include/raointintrin.h:
+/usr/include/x86_64-linux-gnu/bits/types/cookie_io_functions_t.h:
 
 /home/shahzaibsidd/projects/gbEmulator/lib/ram.c:
 
@@ -1405,15 +1685,37 @@ lib/CMakeFiles/emu.dir/ui.c.o: /home/shahzaibsidd/projects/gbEmulator/lib/ui.c \
 
 /usr/lib/gcc/x86_64-linux-gnu/13/include/avx512cdintrin.h:
 
+/home/shahzaibsidd/projects/gbEmulator/lib/ppu_pipeline.c:
+
+/home/shahzaibsidd/projects/gbEmulator/lib/dma.c:
+
+/usr/include/string.h:
+
+/usr/include/stdlib.h:
+
+/usr/include/SDL2/SDL_assert.h:
+
+/usr/include/x86_64-linux-gnu/bits/pthreadtypes.h:
+
+/home/shahzaibsidd/projects/gbEmulator/include/common.h:
+
+/usr/lib/gcc/x86_64-linux-gnu/13/include/clflushoptintrin.h:
+
+/usr/lib/gcc/x86_64-linux-gnu/13/include/vpclmulqdqintrin.h:
+
+/usr/include/features.h:
+
+/usr/include/x86_64-linux-gnu/bits/types/struct_tm.h:
+
+/usr/include/x86_64-linux-gnu/bits/types/FILE.h:
+
+/usr/include/x86_64-linux-gnu/bits/stdio_lim.h:
+
 /usr/include/x86_64-linux-gnu/bits/time.h:
 
 /usr/include/x86_64-linux-gnu/bits/select.h:
 
 /usr/include/x86_64-linux-gnu/bits/endianness.h:
-
-/usr/include/x86_64-linux-gnu/bits/libm-simd-decl-stubs.h:
-
-/usr/include/x86_64-linux-gnu/bits/types/struct_FILE.h:
 
 /usr/include/SDL2/SDL_main.h:
 
@@ -1421,13 +1723,9 @@ lib/CMakeFiles/emu.dir/ui.c.o: /home/shahzaibsidd/projects/gbEmulator/lib/ui.c \
 
 /usr/lib/gcc/x86_64-linux-gnu/13/include/avxifmaintrin.h:
 
-/usr/include/stdlib.h:
+/usr/include/x86_64-linux-gnu/bits/cpu-set.h:
 
-/usr/include/SDL2/SDL_assert.h:
-
-/usr/include/SDL2/SDL_cpuinfo.h:
-
-/usr/include/x86_64-linux-gnu/bits/wordsize.h:
+/home/shahzaibsidd/projects/gbEmulator/lib/cpu_fetch.c:
 
 /usr/include/SDL2/SDL_keycode.h:
 
@@ -1443,59 +1741,21 @@ lib/CMakeFiles/emu.dir/ui.c.o: /home/shahzaibsidd/projects/gbEmulator/lib/ui.c \
 
 /usr/include/x86_64-linux-gnu/bits/types/struct_timeval.h:
 
-/usr/include/x86_64-linux-gnu/bits/pthreadtypes.h:
-
-/home/shahzaibsidd/projects/gbEmulator/include/common.h:
-
-/usr/lib/gcc/x86_64-linux-gnu/13/include/clflushoptintrin.h:
-
-/usr/lib/gcc/x86_64-linux-gnu/13/include/vpclmulqdqintrin.h:
-
-/usr/include/features.h:
-
-/usr/lib/gcc/x86_64-linux-gnu/13/include/prfchwintrin.h:
-
-/usr/include/x86_64-linux-gnu/bits/types/struct_tm.h:
-
-/usr/include/x86_64-linux-gnu/bits/types/FILE.h:
-
-/usr/include/x86_64-linux-gnu/bits/stdio_lim.h:
-
 /home/shahzaibsidd/projects/gbEmulator/lib/cpu.c:
 
 /home/shahzaibsidd/projects/gbEmulator/include/cart.h:
 
-/usr/include/alloca.h:
-
-/usr/include/x86_64-linux-gnu/bits/types/__fpos_t.h:
-
-/home/shahzaibsidd/projects/gbEmulator/include/instructions.h:
-
-/usr/include/x86_64-linux-gnu/bits/getopt_core.h:
-
-/usr/include/x86_64-linux-gnu/bits/timesize.h:
-
-/usr/lib/gcc/x86_64-linux-gnu/13/include/amxtileintrin.h:
-
-/usr/include/features-time64.h:
-
-/usr/include/x86_64-linux-gnu/bits/types/cookie_io_functions_t.h:
-
-/home/shahzaibsidd/projects/gbEmulator/include/ram.h:
-
-/usr/include/x86_64-linux-gnu/bits/wchar.h:
-
 /usr/include/x86_64-linux-gnu/bits/libc-header-start.h:
 
-/home/shahzaibsidd/projects/gbEmulator/include/bus.h:
+/usr/include/x86_64-linux-gnu/bits/types/clockid_t.h:
+
+/usr/include/x86_64-linux-gnu/bits/types/struct___jmp_buf_tag.h:
 
 /usr/include/x86_64-linux-gnu/bits/typesizes.h:
 
 /home/shahzaibsidd/projects/gbEmulator/include/io.h:
 
 /usr/include/SDL2/SDL_scancode.h:
-
-/usr/include/SDL2/SDL_endian.h:
 
 /home/shahzaibsidd/projects/gbEmulator/include/stack.h:
 
@@ -1505,27 +1765,55 @@ lib/CMakeFiles/emu.dir/ui.c.o: /home/shahzaibsidd/projects/gbEmulator/lib/ui.c \
 
 /usr/include/SDL2/SDL_hidapi.h:
 
-/usr/include/x86_64-linux-gnu/bits/types/clockid_t.h:
-
-/usr/include/x86_64-linux-gnu/bits/types/struct___jmp_buf_tag.h:
+/usr/lib/gcc/x86_64-linux-gnu/13/include/avx512ifmavlintrin.h:
 
 /usr/include/x86_64-linux-gnu/bits/types.h:
 
-/usr/lib/gcc/x86_64-linux-gnu/13/include/avx512ifmavlintrin.h:
+/usr/include/x86_64-linux-gnu/bits/stdint-intn.h:
+
+/usr/lib/gcc/x86_64-linux-gnu/13/include/fxsrintrin.h:
+
+/home/shahzaibsidd/projects/gbEmulator/include/bus.h:
+
+/usr/include/x86_64-linux-gnu/bits/getopt_core.h:
+
+/usr/include/x86_64-linux-gnu/bits/timesize.h:
+
+/usr/lib/gcc/x86_64-linux-gnu/13/include/amxtileintrin.h:
+
+/usr/include/features-time64.h:
+
+/home/shahzaibsidd/projects/gbEmulator/include/instructions.h:
+
+/usr/include/x86_64-linux-gnu/bits/types/__fpos_t.h:
+
+/usr/include/alloca.h:
 
 /home/shahzaibsidd/projects/gbEmulator/lib/instructions.c:
-
-/usr/lib/gcc/x86_64-linux-gnu/13/include/avx512erintrin.h:
 
 /usr/lib/gcc/x86_64-linux-gnu/13/include/avx512fp16intrin.h:
 
 /usr/include/x86_64-linux-gnu/bits/types/sigset_t.h:
+
+/usr/lib/gcc/x86_64-linux-gnu/13/include/shaintrin.h:
+
+/usr/include/x86_64-linux-gnu/bits/time64.h:
+
+/usr/lib/gcc/x86_64-linux-gnu/13/include/avx512erintrin.h:
+
+/home/shahzaibsidd/projects/gbEmulator/include/ppu.h:
+
+/usr/include/x86_64-linux-gnu/bits/stdint-least.h:
+
+/usr/include/x86_64-linux-gnu/bits/types/mbstate_t.h:
 
 /home/shahzaibsidd/projects/gbEmulator/lib/cpu_proc.c:
 
 /usr/include/x86_64-linux-gnu/bits/types/__mbstate_t.h:
 
 /usr/include/x86_64-linux-gnu/bits/stdlib-float.h:
+
+/home/shahzaibsidd/projects/gbEmulator/include/ppu_sm.h:
 
 /usr/include/stdc-predef.h:
 
@@ -1543,23 +1831,11 @@ lib/CMakeFiles/emu.dir/ui.c.o: /home/shahzaibsidd/projects/gbEmulator/lib/ui.c \
 
 /usr/lib/gcc/x86_64-linux-gnu/13/include/cetintrin.h:
 
-/usr/include/SDL2/SDL_gamecontroller.h:
-
-/usr/include/x86_64-linux-gnu/bits/types/timer_t.h:
-
 /usr/lib/gcc/x86_64-linux-gnu/13/include/smmintrin.h:
 
 /usr/include/SDL2/SDL_platform.h:
 
 /usr/lib/gcc/x86_64-linux-gnu/13/include/stdarg.h:
-
-/usr/include/x86_64-linux-gnu/bits/struct_rwlock.h:
-
-/usr/include/strings.h:
-
-/usr/include/SDL2/SDL_guid.h:
-
-/usr/include/x86_64-linux-gnu/bits/thread-shared-types.h:
 
 /usr/include/x86_64-linux-gnu/bits/long-double.h:
 
@@ -1601,6 +1877,34 @@ lib/CMakeFiles/emu.dir/ui.c.o: /home/shahzaibsidd/projects/gbEmulator/lib/ui.c \
 
 /usr/lib/gcc/x86_64-linux-gnu/13/include/amxint8intrin.h:
 
+/usr/lib/gcc/x86_64-linux-gnu/13/include/rdseedintrin.h:
+
+/usr/include/SDL2/SDL_config.h:
+
+/usr/include/unistd.h:
+
+/usr/lib/gcc/x86_64-linux-gnu/13/include/fmaintrin.h:
+
+/usr/include/SDL2/SDL_cpuinfo.h:
+
+/usr/include/SDL2/SDL_endian.h:
+
+/usr/include/SDL2/SDL_error.h:
+
+/usr/include/SDL2/SDL_events.h:
+
+/usr/include/x86_64-linux-gnu/bits/types/struct_FILE.h:
+
+/usr/include/x86_64-linux-gnu/bits/libm-simd-decl-stubs.h:
+
+/usr/include/x86_64-linux-gnu/bits/types/timer_t.h:
+
+/usr/include/SDL2/SDL_gamecontroller.h:
+
+/usr/include/x86_64-linux-gnu/bits/thread-shared-types.h:
+
+/usr/include/SDL2/SDL_guid.h:
+
 /usr/include/pthread.h:
 
 /usr/include/SDL2/SDL_hints.h:
@@ -1608,6 +1912,8 @@ lib/CMakeFiles/emu.dir/ui.c.o: /home/shahzaibsidd/projects/gbEmulator/lib/ui.c \
 /usr/include/SDL2/SDL_joystick.h:
 
 /usr/include/SDL2/SDL_loadso.h:
+
+/home/shahzaibsidd/projects/gbEmulator/lib/lcd.c:
 
 /usr/include/SDL2/SDL_locale.h:
 
@@ -1620,6 +1926,8 @@ lib/CMakeFiles/emu.dir/ui.c.o: /home/shahzaibsidd/projects/gbEmulator/lib/ui.c \
 /usr/lib/gcc/x86_64-linux-gnu/13/include/avx512fp16vlintrin.h:
 
 /usr/lib/gcc/x86_64-linux-gnu/13/include/avx512vldqintrin.h:
+
+/home/shahzaibsidd/projects/gbEmulator/include/dma.h:
 
 /usr/include/SDL2/SDL_messagebox.h:
 
@@ -1681,10 +1989,6 @@ lib/CMakeFiles/emu.dir/ui.c.o: /home/shahzaibsidd/projects/gbEmulator/lib/ui.c \
 
 /usr/lib/gcc/x86_64-linux-gnu/13/include/lwpintrin.h:
 
-/usr/include/SDL2/SDL_config.h:
-
-/usr/lib/gcc/x86_64-linux-gnu/13/include/rdseedintrin.h:
-
 /usr/include/SDL2/close_code.h:
 
 /usr/lib/gcc/x86_64-linux-gnu/13/include/cmpccxaddintrin.h:
@@ -1698,8 +2002,6 @@ lib/CMakeFiles/emu.dir/ui.c.o: /home/shahzaibsidd/projects/gbEmulator/lib/ui.c \
 /usr/include/x86_64-linux-gnu/bits/types/__FILE.h:
 
 /usr/include/math.h:
-
-/usr/include/string.h:
 
 /usr/lib/gcc/x86_64-linux-gnu/13/include/pkuintrin.h:
 
@@ -1727,8 +2029,6 @@ lib/CMakeFiles/emu.dir/ui.c.o: /home/shahzaibsidd/projects/gbEmulator/lib/ui.c \
 
 /usr/lib/gcc/x86_64-linux-gnu/13/include/amxbf16intrin.h:
 
-/usr/lib/gcc/x86_64-linux-gnu/13/include/rtmintrin.h:
-
 /usr/include/SDL2/SDL_render.h:
 
 /usr/lib/gcc/x86_64-linux-gnu/13/include/amxcomplexintrin.h:
@@ -1748,10 +2048,6 @@ lib/CMakeFiles/emu.dir/ui.c.o: /home/shahzaibsidd/projects/gbEmulator/lib/ui.c \
 /usr/lib/gcc/x86_64-linux-gnu/13/include/avx512dqintrin.h:
 
 /usr/lib/gcc/x86_64-linux-gnu/13/include/avx512vbmi2vlintrin.h:
-
-/usr/include/x86_64-linux-gnu/bits/time64.h:
-
-/usr/lib/gcc/x86_64-linux-gnu/13/include/shaintrin.h:
 
 /usr/lib/gcc/x86_64-linux-gnu/13/include/prfchiintrin.h:
 
@@ -1774,8 +2070,6 @@ lib/CMakeFiles/emu.dir/ui.c.o: /home/shahzaibsidd/projects/gbEmulator/lib/ui.c \
 /usr/lib/gcc/x86_64-linux-gnu/13/include/enqcmdintrin.h:
 
 /usr/lib/gcc/x86_64-linux-gnu/13/include/hresetintrin.h:
-
-/usr/lib/gcc/x86_64-linux-gnu/13/include/sgxintrin.h:
 
 /usr/include/SDL2/SDL_video.h:
 

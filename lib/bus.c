@@ -3,6 +3,8 @@
 #include <ram.h>
 #include <cpu.h>
 #include <io.h>
+#include <ppu.h>
+#include <dma.h>
 
 // 0x0000 - 0x3FFF : ROM Bank 0
 // 0x4000 - 0x7FFF : ROM Bank 1 - Switchable    
@@ -22,11 +24,8 @@ u8 bus_read(u16 address) {
     if (address < 0x8000) {
         return cart_read(address);
     } else if (address < 0xA000) {
-        //Map and Character Data
-        //TODO
-        printf("NOT SUPPORTED: bus_read(%04X)\n", address);
-        //NOT_IMPL
-        return 0;
+        //Map and Character Data VRAM
+        return ppu_vram_read(address);
     } else if (address < 0xC000) {
         //Cartridge RAM
         return cart_read(address);  
@@ -38,10 +37,10 @@ u8 bus_read(u16 address) {
         return 0;
     } else if (address < 0xFEA0) {
         //object attribute memory
-        //TODO
-        printf("NOT SUPPORTED: bus_read(%04X)\n", address);
-        //NOT_IMPL
-        return 0;
+        if (dma_transferring()) {
+            return 0xFF;
+        }
+        return ppu_oam_read(address);
     } else if (address < 0xFF00) {
         //Reserved (not gonna use)
         return 0;
@@ -69,10 +68,8 @@ void bus_write(u16 address, u8 value) {
     if (address < 0x8000) {
         cart_write(address, value);
     } else if (address < 0xA000) {
-        //Map and character data
-        //TODO
-        printf("NOT SUPPORTED: bus_write(%04X)\n", address);
-        //NOT_IMPL
+        //Map and character data VRAM
+        ppu_vram_write(address, value);
     } else if (address < 0xC000) {
         //Cartridge RAM
         cart_write(address, value);
@@ -83,9 +80,10 @@ void bus_write(u16 address, u8 value) {
         //Reserved (not gonna use)
     } else if (address < 0xFEA0) {
         //object attribute memory
-        //TODO
-        printf("NOT SUPPORTED: bus_write(%04X)\n", address);
-        //NOT_IMPL
+        if (dma_transferring()) {
+            return;
+        }
+        ppu_oam_write(address, value);
     } else if (address < 0xFF00) {
         //Reserved (not gonna use)
     } else if (address < 0xFF80) {
