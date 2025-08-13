@@ -59,4 +59,8 @@ lib/CMakeFiles/emu.dir/ppu_sm.c.o: \
  /home/shahzaibsidd/projects/gbEmulator/include/lcd.h \
  /home/shahzaibsidd/projects/gbEmulator/include/cpu.h \
  /home/shahzaibsidd/projects/gbEmulator/include/instructions.h \
- /home/shahzaibsidd/projects/gbEmulator/include/interrupts.h
+ /home/shahzaibsidd/projects/gbEmulator/include/interrupts.h \
+ /usr/include/string.h \
+ /usr/include/x86_64-linux-gnu/bits/types/locale_t.h \
+ /usr/include/x86_64-linux-gnu/bits/types/__locale_t.h \
+ /usr/include/strings.h

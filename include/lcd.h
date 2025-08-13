@@ -6,8 +6,8 @@ typedef struct {
     //registers
     u8 lcd_control;     //FF40
     u8 status;          //FF41
-    u8 scx;             //FF42
-    u8 scy;             //FF43
+    u8 scy;             //FF42
+    u8 scx;             //FF43
     u8 ly;              //FF44
     u8 lyc;             //FF45
     u8 dma;             //FF46

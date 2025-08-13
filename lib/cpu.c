@@ -96,7 +96,6 @@ bool cpu_step() {
     
     if (ctx.enabling_ime) {
         ctx.int_master_enabled = true;
-        ctx.enabling_ime = false;
     }
 
     return true;

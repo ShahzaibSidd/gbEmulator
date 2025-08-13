@@ -12,7 +12,6 @@ lcd_context *lcd_get_context() {
 
 void lcd_init() {
     ctx.lcd_control = 0x91;
-    ctx.status = 0x85;
     ctx.scx = 0;
     ctx.scy = 0;
     ctx.ly = 0;
@@ -23,7 +22,7 @@ void lcd_init() {
     ctx.win_x = 0;
     ctx.win_y = 0;
 
-    for (int i; i<4; i++) {
+    for (int i = 0; i<4; i++) {
         ctx.bg_colours[i] = colours_default[i];
         ctx.sp1_colours[i] = colours_default[i];
         ctx.sp2_colours[i] = colours_default[i];
@@ -32,9 +31,10 @@ void lcd_init() {
 }
 
 u8 lcd_read(u16 address) {
-    address -= 0xFF40;
+    u8 offset = (address - 0xFF40);
     u8 *p = (u8 *)&ctx;
-    return p[address];
+
+    return p[offset];
 }
 
 void update_pallette(u8 value, u8 pallette) {
@@ -56,22 +56,22 @@ void update_pallette(u8 value, u8 pallette) {
 }
 
 void lcd_write(u16 address, u8 value) {
-    address -= 0xFF40;
+    u8 offset = address - 0xFF40;
     u8 *p = (u8 *)&ctx;
-    p[address] = value;
+    p[offset] = value;
 
     //DMA CALL (0xFF46)
-    if (address == 6) {
+    if (offset == 6) {
         dma_start(value);
         printf("DMA STARTED\n");
     }
     
     //PALLETTES (0xFF47 - 0xFF49)
-    if (address == 7) {
+    if (address == 0xFF47) {
         update_pallette(value, 0);
-    } else if (address == 8) {
-        update_pallette(value & ~0b11, 1);
-    } else if (address == 9) {
-        update_pallette(value & ~0b11, 1);
+    } else if (address == 0xFF48) {
+        update_pallette(value & 0b11111100, 1);
+    } else if (address == 0xFF49) {
+        update_pallette(value & 0b11111100, 2);
     }
 }
