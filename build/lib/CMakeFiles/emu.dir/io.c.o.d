@@ -58,4 +58,6 @@ lib/CMakeFiles/emu.dir/io.c.o: \
  /usr/include/x86_64-linux-gnu/bits/stdlib-float.h \
  /home/shahzaibsidd/projects/gbEmulator/include/timer.h \
  /home/shahzaibsidd/projects/gbEmulator/include/cpu.h \
- /home/shahzaibsidd/projects/gbEmulator/include/instructions.h
+ /home/shahzaibsidd/projects/gbEmulator/include/instructions.h \
+ /home/shahzaibsidd/projects/gbEmulator/include/dma.h \
+ /home/shahzaibsidd/projects/gbEmulator/include/lcd.h

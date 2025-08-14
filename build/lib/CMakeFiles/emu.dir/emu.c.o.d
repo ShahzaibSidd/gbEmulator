@@ -61,6 +61,8 @@ lib/CMakeFiles/emu.dir/emu.c.o: \
  /home/shahzaibsidd/projects/gbEmulator/include/instructions.h \
  /home/shahzaibsidd/projects/gbEmulator/include/ui.h \
  /home/shahzaibsidd/projects/gbEmulator/include/timer.h \
+ /home/shahzaibsidd/projects/gbEmulator/include/dma.h \
+ /home/shahzaibsidd/projects/gbEmulator/include/ppu.h \
  /usr/include/pthread.h /usr/include/sched.h \
  /usr/include/x86_64-linux-gnu/bits/sched.h \
  /usr/include/x86_64-linux-gnu/bits/types/struct_sched_param.h \

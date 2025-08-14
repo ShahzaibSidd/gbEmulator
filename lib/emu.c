@@ -4,6 +4,8 @@
 #include <cpu.h>
 #include <ui.h>
 #include <timer.h>
+#include <dma.h>
+#include <ppu.h>
 
 //wont work in windows
 #include <pthread.h>
@@ -29,6 +31,7 @@ emu_context *emu_get_context() {
 void *cpu_run(void *p) {
     timer_init();
     cpu_init();
+    ppu_init();
 
     ctx.running = true;
     ctx.paused = false;
@@ -64,27 +67,43 @@ int emu_run(int argc, char **argv) {
     
     ui_init();
 
+
     pthread_t t1;
 
     if (pthread_create(&t1, NULL, cpu_run, NULL)) {
         fprintf(stderr, "FAILED TO START MAIN CPU THREAD!\n");
         return -1;
     }
+
+    u32 prev_frame = 0;
     
     while (!ctx.die) {
         usleep(1000);
         ui_handle_events();
+
+        if (prev_frame != ppu_get_context()->current_frame) {
+            ui_update();
+        }
+        
+        prev_frame = ppu_get_context()->current_frame;
     }
 
     return 0;
 }
 
 void emu_cycles(int cpu_cycles) {
+
+    for (int i = 0; i < cpu_cycles; i++) {
+        for (int j = 0; j < 4; j++) {
+            ctx.ticks++;
+            timer_tick();
+            ppu_tick();
+        }
+
+        dma_tick();
+    }
+
     int n = cpu_cycles * 4;
 
-    for (int i = 0; i < n; i++) {
-        ctx.ticks++;
-        timer_tick();
-    }
     return;
 };

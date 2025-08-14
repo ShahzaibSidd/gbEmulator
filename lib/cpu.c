@@ -5,6 +5,9 @@
 #include <debug.h>
 #include <timer.h>
 
+#define CPU_DEBUG 0
+
+
 cpu_context ctx = {0};
 
 void cpu_init() {
@@ -46,6 +49,7 @@ bool cpu_step() {
         emu_cycles(1);
         fetch_data();
 
+#if CPU_DEBUG == 1
         char flags[16];
         sprintf(flags, "%c%c%c%c", 
             ctx.regs.f & (1 << 7) ? 'Z' : '-',
@@ -65,7 +69,8 @@ bool cpu_step() {
             ctx.regs.d, ctx.regs.e, 
             ctx.regs.h, ctx.regs.l
         );
-        
+#endif
+
         if (ctx.cur_inst == NULL) {
             printf("Uknown Intruction... %02X\n", ctx.cur_opcode);
             exit(-7);
@@ -91,7 +96,6 @@ bool cpu_step() {
     
     if (ctx.enabling_ime) {
         ctx.int_master_enabled = true;
-        ctx.enabling_ime = false;
     }
 
     return true;
