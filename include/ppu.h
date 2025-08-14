@@ -69,6 +69,8 @@ typedef struct {
     u8 fetched_entry_count;
     oam_entry fetched_entries[3];
 
+    u8 window_line;
+
     pixel_fifo_context pfc;
 
     u32 current_frame;

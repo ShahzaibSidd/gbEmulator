@@ -21,6 +21,8 @@ void ppu_init() {
     ctx.pfc.pixel_fifo.head = ctx.pfc.pixel_fifo.tail = NULL;
     ctx.pfc.curr_fetch_state = FS_TILE;
 
+    ctx.window_line = 0;
+
     ctx.line_sprites = 0;
     ctx.fetched_entry_count = 0;
     
