@@ -7,6 +7,8 @@
 static char serial_data[2];
 
 u8 io_read(u16 address) {
+    
+
     if (address == 0xFF01) {
         return serial_data[0];
     }
