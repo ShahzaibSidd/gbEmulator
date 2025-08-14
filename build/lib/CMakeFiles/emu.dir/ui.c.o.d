@@ -59,6 +59,7 @@ lib/CMakeFiles/emu.dir/ui.c.o: \
  /home/shahzaibsidd/projects/gbEmulator/include/emu.h \
  /home/shahzaibsidd/projects/gbEmulator/include/bus.h \
  /home/shahzaibsidd/projects/gbEmulator/include/ppu.h \
+ /home/shahzaibsidd/projects/gbEmulator/include/joypad.h \
  /usr/include/SDL2/SDL.h /usr/include/SDL2/SDL_main.h \
  /usr/include/SDL2/SDL_stdinc.h /usr/include/SDL2/SDL_config.h \
  /usr/include/x86_64-linux-gnu/SDL2/_real_SDL_config.h \

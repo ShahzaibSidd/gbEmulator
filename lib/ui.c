@@ -2,6 +2,7 @@
 #include <emu.h>
 #include <bus.h>
 #include <ppu.h>
+#include <joypad.h>
 #include <SDL2/SDL.h>
 #include <SDL2/SDL_ttf.h>
 
@@ -147,13 +148,48 @@ void ui_update() {
     update_debug_window();
 }
 
+void ui_on_key(bool pressed, SDL_Keycode key) {
+    switch (key) {
+        case SDLK_TAB:
+            joypad_get_state()->select = pressed;
+            break;
+        case SDLK_RETURN:
+            joypad_get_state()->start = pressed;
+            break;
+        case SDLK_j:
+            joypad_get_state()->a = pressed;
+            break;
+        case SDLK_k:
+            joypad_get_state()->b = pressed;
+            break;
+
+        case SDLK_w:
+            joypad_get_state()->up = pressed;
+            break;
+        case SDLK_a:
+            joypad_get_state()->left = pressed;
+            break;
+        case SDLK_s:
+            joypad_get_state()->down = pressed;
+            break;
+        case SDLK_d:
+            joypad_get_state()->right = pressed;
+            break;
+    }
+}
+
 void ui_handle_events() {
     SDL_Event e;
     while (SDL_PollEvent(&e) > 0)
     {
-        //TODO SDL_UpdateWindowSurface(sdlWindow);
-        //TODO SDL_UpdateWindowSurface(sdlTraceWindow);
-        //TODO SDL_UpdateWindowSurface(sdlDebugWindow);
+
+        if (e.type == SDL_KEYDOWN) {
+            ui_on_key(true, e.key.keysym.sym);
+        }
+
+        if (e.type == SDL_KEYUP) {
+            ui_on_key(false, e.key.keysym.sym);
+        }
 
         if (e.type == SDL_WINDOWEVENT && e.window.event == SDL_WINDOWEVENT_CLOSE) {
             emu_get_context()->die = true;

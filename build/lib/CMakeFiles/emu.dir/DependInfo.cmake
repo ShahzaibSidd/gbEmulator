@@ -20,6 +20,7 @@ set(CMAKE_DEPENDS_DEPENDENCY_FILES
   "/home/shahzaibsidd/projects/gbEmulator/lib/instructions.c" "lib/CMakeFiles/emu.dir/instructions.c.o" "gcc" "lib/CMakeFiles/emu.dir/instructions.c.o.d"
   "/home/shahzaibsidd/projects/gbEmulator/lib/interrupts.c" "lib/CMakeFiles/emu.dir/interrupts.c.o" "gcc" "lib/CMakeFiles/emu.dir/interrupts.c.o.d"
   "/home/shahzaibsidd/projects/gbEmulator/lib/io.c" "lib/CMakeFiles/emu.dir/io.c.o" "gcc" "lib/CMakeFiles/emu.dir/io.c.o.d"
+  "/home/shahzaibsidd/projects/gbEmulator/lib/joypad.c" "lib/CMakeFiles/emu.dir/joypad.c.o" "gcc" "lib/CMakeFiles/emu.dir/joypad.c.o.d"
   "/home/shahzaibsidd/projects/gbEmulator/lib/lcd.c" "lib/CMakeFiles/emu.dir/lcd.c.o" "gcc" "lib/CMakeFiles/emu.dir/lcd.c.o.d"
   "/home/shahzaibsidd/projects/gbEmulator/lib/ppu.c" "lib/CMakeFiles/emu.dir/ppu.c.o" "gcc" "lib/CMakeFiles/emu.dir/ppu.c.o.d"
   "/home/shahzaibsidd/projects/gbEmulator/lib/ppu_pipeline.c" "lib/CMakeFiles/emu.dir/ppu_pipeline.c.o" "gcc" "lib/CMakeFiles/emu.dir/ppu_pipeline.c.o.d"

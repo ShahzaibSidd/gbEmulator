@@ -474,6 +474,30 @@ io.c.s:
 	cd /home/shahzaibsidd/projects/gbEmulator/build && $(MAKE) $(MAKESILENT) -f lib/CMakeFiles/emu.dir/build.make lib/CMakeFiles/emu.dir/io.c.s
 .PHONY : io.c.s
 
+joypad.o: joypad.c.o
+.PHONY : joypad.o
+
+# target to build an object file
+joypad.c.o:
+	cd /home/shahzaibsidd/projects/gbEmulator/build && $(MAKE) $(MAKESILENT) -f lib/CMakeFiles/emu.dir/build.make lib/CMakeFiles/emu.dir/joypad.c.o
+.PHONY : joypad.c.o
+
+joypad.i: joypad.c.i
+.PHONY : joypad.i
+
+# target to preprocess a source file
+joypad.c.i:
+	cd /home/shahzaibsidd/projects/gbEmulator/build && $(MAKE) $(MAKESILENT) -f lib/CMakeFiles/emu.dir/build.make lib/CMakeFiles/emu.dir/joypad.c.i
+.PHONY : joypad.c.i
+
+joypad.s: joypad.c.s
+.PHONY : joypad.s
+
+# target to generate assembly for a file
+joypad.c.s:
+	cd /home/shahzaibsidd/projects/gbEmulator/build && $(MAKE) $(MAKESILENT) -f lib/CMakeFiles/emu.dir/build.make lib/CMakeFiles/emu.dir/joypad.c.s
+.PHONY : joypad.c.s
+
 lcd.o: lcd.c.o
 .PHONY : lcd.o
 
@@ -716,6 +740,9 @@ help:
 	@echo "... io.o"
 	@echo "... io.i"
 	@echo "... io.s"
+	@echo "... joypad.o"
+	@echo "... joypad.i"
+	@echo "... joypad.s"
 	@echo "... lcd.o"
 	@echo "... lcd.i"
 	@echo "... lcd.s"
