@@ -63,4 +63,5 @@ lib/CMakeFiles/emu.dir/ppu_sm.c.o: \
  /usr/include/string.h \
  /usr/include/x86_64-linux-gnu/bits/types/locale_t.h \
  /usr/include/x86_64-linux-gnu/bits/types/__locale_t.h \
- /usr/include/strings.h
+ /usr/include/strings.h \
+ /home/shahzaibsidd/projects/gbEmulator/include/cart.h
