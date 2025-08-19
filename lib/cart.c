@@ -161,11 +161,31 @@ bool cart_battery() {
 }
 
 void cart_battery_load() {
+    char fn[1048];
+    sprintf(fn, "%s.battery", ctx.filename);
+    FILE *fp = fopen(fn, "rb");
 
+    if (!fp) {
+        fprintf(stderr, "FAILED TO OPEN FP, OR IT DOES NOT EXIST: %s\n", fn);
+        return;
+    }
+
+    fread(ctx.ram_bank, 0x2000, 1, fp);
+    fclose(fp);
 }
 
 void cart_battery_save() {
+    char fn[1048];
+    sprintf(fn, "%s.battery", ctx.filename);
+    FILE *fp = fopen(fn, "wb");
 
+    if (!fp) {
+        fprintf(stderr, "FAILED TO OPEN FP, OR IT DOES NOT EXIST: %s\n", fn);
+        return;
+    }
+
+    fwrite(ctx.ram_bank, 0x2000, 1, fp);
+    fclose(fp);
 }
 
 const char *cart_lic_name() {

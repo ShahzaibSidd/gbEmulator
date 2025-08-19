@@ -480,7 +480,6 @@ static void proc_add(cpu_context *ctx) {
 
 static void proc_stop(cpu_context *ctx) {
     fprintf(stderr, "STOPPING!\n");
-    NOT_IMPL
 }
 
 static void proc_daa(cpu_context *ctx) {
